@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Raleway } from "next/font/google";
 import Navbar from "@/components/navbar";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const font = Raleway({ subsets: ["latin"], weight: "500" });
 
@@ -17,12 +18,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className}>
-        <div>
-          <Navbar />
-        </div>
-        {children}
-      </body>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        <body className={font.className}>
+          <div>
+            <Navbar />
+          </div>
+          {children}
+        </body>
+      </ThemeProvider>
     </html>
   );
 }
