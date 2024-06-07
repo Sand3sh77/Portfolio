@@ -1,37 +1,58 @@
 import Image from "next/image";
 import { HoverEffect } from "./ui/card-hover-effect";
+import { RiNextjsFill } from "react-icons/ri";
+import { FaReact, FaFigma, FaNodeJs } from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
+import { IoLogoJavascript } from "react-icons/io5";
+import { SiCplusplus, SiTypescript } from "react-icons/si";
 
 const TechStack = () => {
   const projects = [
     {
-      title: "Stripe",
-      imageUrl: "/images/logos/xyx.png",
-      link: "https://stripe.com",
+      title: "Next.js",
+      svg: <RiNextjsFill className="h-[3rem] w-[3rem]" />,
+      hover: "#78d5d0",
     },
     {
-      title: "Netflix",
-      imageUrl: "/images/logos/xyx.png",
-      link: "https://netflix.com",
+      title: "React",
+      svg: <FaReact className="h-[3rem] w-[3rem]" />,
+      hover: "#60C7DE",
     },
     {
-      title: "Google",
-      imageUrl: "/images/logos/xyx.png",
-      link: "https://google.com",
+      title: "Javascript",
+      svg: <IoLogoJavascript className="h-[3rem] w-[3rem]" />,
+      hover: "#F7DF1E",
     },
     {
-      title: "Meta",
-      imageUrl: "/images/logos/xyx.png",
-      link: "https://meta.com",
+      title: "Typescript",
+      svg: <SiTypescript className="h-[3rem] w-[3rem]" />,
+      hover: "#017acb",
     },
     {
-      title: "Amazon",
-      imageUrl: "/images/logos/xyx.png",
-      link: "https://amazon.com",
+      title: "MySql",
+      svg: <GrMysql className="h-[3rem] w-[3rem]" />,
+      hover: "rgb(0,84,107)",
     },
     {
-      title: "Microsoft",
-      imageUrl: "/images/logos/xyx.png",
-      link: "https://microsoft.com",
+      title: "MongoDB",
+      svg: <SiMongodb className="h-[3rem] w-[3rem]" />,
+      hover: "#10AA50",
+    },
+    {
+      title: "NodeJS",
+      svg: <FaNodeJs className="h-[3rem] w-[3rem]" />,
+      hover: "#8cc84b",
+    },
+    {
+      title: "C++",
+      svg: <SiCplusplus className="h-[3rem] w-[3rem]" />,
+      hover: "#5c8dbc",
+    },
+    {
+      title: "Figma",
+      svg: <FaFigma className="h-[3rem] w-[3rem]" />,
+      hover: "",
     },
   ];
 
@@ -42,10 +63,12 @@ const TechStack = () => {
           Tech Stack
         </h2>
         <p className="text-[#1a1919] dark:text-[#A0988C] text-xl tracking-wide">
-          Some of my projects from the past few years as a web developer.
+          Some of the tech tools I use for website design and development.
         </p>
       </div>
-      <HoverEffect items={projects} />
+      <div className="w-[90%] m-auto">
+        <HoverEffect items={projects} />
+      </div>
     </div>
   );
 };
