@@ -8,6 +8,7 @@ const Projects = [
   {
     title: "QuizHunt - Create,Share,Play",
     siteUrl: "",
+    codeUrl: "",
     imageUrl: "/images/projects/quizhunthome.png",
     description:
       "Quizhunt is a quiz app where you can create, play and share quiz.",
@@ -16,12 +17,14 @@ const Projects = [
     title: "SafeBook - Social Media",
     siteUrl: "https://safebook.vercel.app",
     imageUrl: "/images/projects/safebookhome.png",
+    codeUrl: "https://github.com/Sand3sh77/SocialMediaApp",
     description:
       "Safebook is a social media site where you can post stories and experiences or chat with friends.",
   },
   {
     title: "Thrift Store - Ecommerce",
     siteUrl: "https://subedisandesh7.com.np",
+    codeUrl: "",
     imageUrl: "/images/projects/thriftstorehome.png",
     description:
       "Thrift store is an ecommerce site where you can easily sell your unused clothes.",
@@ -43,11 +46,18 @@ const MyProjects = () => {
         {Projects.map((project, index) => {
           return (
             <div className="" key={index}>
-              <DirectionAwareHover imageUrl={project.imageUrl}>
+              <DirectionAwareHover
+                imageUrl={project.imageUrl}
+                codeUrl={project.codeUrl}
+              >
                 <div className="">
-                  <button className="rounded py-2 px-4 hover:text-[#d4d4d6]">
-                    Case Study
-                  </button>
+                  {project.codeUrl && (
+                    <a href={project.codeUrl} target="_blank">
+                      <button className="rounded py-2 px-4 hover:text-[#c2c2c5]">
+                        Visit Code
+                      </button>
+                    </a>
+                  )}
                   {project.siteUrl && (
                     <a href={project.siteUrl} target="_blank">
                       <button className="rounded py-2 px-4 hover:text-[#c2c2c5]">

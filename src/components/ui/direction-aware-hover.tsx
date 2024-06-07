@@ -7,12 +7,14 @@ import { cn } from "@/utils/cn";
 
 export const DirectionAwareHover = ({
   imageUrl,
+  codeUrl,
   children,
   childrenClassName,
   imageClassName,
   className,
 }: {
   imageUrl: string;
+  codeUrl: string;
   children: React.ReactNode | string;
   childrenClassName?: string;
   imageClassName?: string;

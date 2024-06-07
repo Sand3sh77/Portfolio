@@ -22,7 +22,7 @@ const TechStack = () => {
     {
       title: "Javascript",
       svg: <IoLogoJavascript className="h-[3rem] w-[3rem]" />,
-      hover: "#F7DF1E",
+      hover: "#ebd744",
     },
     {
       title: "Typescript",
@@ -63,7 +63,7 @@ const TechStack = () => {
           Tech Stack
         </h2>
         <p className="text-[#1a1919] dark:text-[#A0988C] text-xl tracking-wide">
-          Some of the tech tools I use for website design and development.
+          Some of the tools I use for website design and development.
         </p>
       </div>
       <div className="w-[90%] m-auto">

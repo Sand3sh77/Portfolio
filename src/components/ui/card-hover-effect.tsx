@@ -1,7 +1,6 @@
 // components/ui/card-hover-effect.tsx
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
 import { useState } from "react";
 
 export const HoverEffect = ({
@@ -15,7 +14,7 @@ export const HoverEffect = ({
   }[];
   className?: string;
 }) => {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <div
@@ -48,7 +47,7 @@ export const HoverEffect = ({
               />
             )}
           </AnimatePresence>
-          <Card hover={item.hover}>
+          <Card hover={item.hover} isHovered={hoveredIndex === idx}>
             <CardSvg>{item.svg}</CardSvg>
             <CardTitle>{item.title}</CardTitle>
           </Card>
@@ -60,19 +59,22 @@ export const HoverEffect = ({
 
 export const Card = ({
   className,
-  hover,
   children,
+  hover,
+  isHovered,
 }: {
   className?: string;
   children: React.ReactNode;
   hover: string;
+  isHovered: boolean;
 }) => {
   return (
     <div
       className={cn(
-        `rounded-2xl h-full w-full p-4 overflow-hidden bg-[#f0eded] dark:bg-black border border-transparent dark:border-white/[0.2] dark:group-hover:border-slate-700 relative z-20 transition-colors duration-300 hover:text-[${hover}]`,
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-[#f0eded] dark:bg-black border border-transparent dark:border-white/[0.2] dark:group-hover:border-slate-700 relative z-20 transition-colors duration-300",
         className
       )}
+      style={{ color: isHovered ? hover : undefined }}
     >
       <div className="relative z-50">
         <div className="p-4">{children}</div>
