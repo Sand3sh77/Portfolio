@@ -16,7 +16,7 @@ const Navbar = () => {
   const { setTheme } = useTheme();
 
   return (
-    <section className="absolute top-0 w-full h-20 z-20 bg-[#f3f4f7c0] dark:bg-[#151932d2]">
+    <section className="fixed top-0 left-0 w-full z-50 h-20 bg-[#f3f4f7c0] dark:bg-[#151932d2]">
       <div className="h-full w-[90%] m-auto flex justify-between items-center">
         <div className="flex gap-5">
           {/* <div>Burger</div> */}
@@ -33,14 +33,26 @@ const Navbar = () => {
                 <span className="sr-only">Toggle theme</span>
               </div>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => setTheme("light")}>
+            <DropdownMenuContent
+              align="end"
+              className="bg-[#dee0e6d2] text-[#1f1e1e] dark:text-[#c2b7c5] dark:bg-[#1E2637]"
+            >
+              <DropdownMenuItem
+                onClick={() => setTheme("light")}
+                className="hover:bg-[#a09d9d] dark:hover:bg-[#353333] cursor-pointer"
+              >
                 Light
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("dark")}>
+              <DropdownMenuItem
+                onClick={() => setTheme("dark")}
+                className="hover:bg-[#a09d9d] dark:hover:bg-[#353333] cursor-pointer"
+              >
                 Dark
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("system")}>
+              <DropdownMenuItem
+                onClick={() => setTheme("system")}
+                className="hover:bg-[#a09d9d] dark:hover:bg-[#353333] cursor-pointer"
+              >
                 System
               </DropdownMenuItem>
             </DropdownMenuContent>
