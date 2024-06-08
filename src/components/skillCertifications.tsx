@@ -73,9 +73,9 @@ const SkillCertifications: React.FC = () => {
           Some of the skill certifications I received.
         </p>
       </div>
-      <div className="flex justify-evenly items-center gap-5 mt-8">
+      <div className="flex flex-col md:flex-row justify-evenly items-center gap-5 mt-8">
         {blogContent.map((item) => (
-          <div key={item.slug} className="w-80 mx-auto">
+          <div key={item.slug} className="w-[25rem] md:w-80 mx-auto">
             <FollowerPointerCard
               title={
                 <TitleComponent

@@ -6,6 +6,14 @@ import { Button } from "./ui/moving-border";
 
 const Projects = [
   {
+    title: "Thrift Store - Ecommerce",
+    siteUrl: "https://subedisandesh7.com.np",
+    codeUrl: "",
+    imageUrl: "/images/projects/thriftstorehome.png",
+    description:
+      "Thrift store is an ecommerce site where you can easily sell your unused clothes.",
+  },
+  {
     title: "QuizHunt - Create,Share,Play",
     siteUrl: "",
     codeUrl: "",
@@ -19,33 +27,25 @@ const Projects = [
     imageUrl: "/images/projects/safebookhome.png",
     codeUrl: "https://github.com/Sand3sh77/SocialMediaApp",
     description:
-      "Safebook is a social media site where you can post stories and experiences or chat with friends.",
-  },
-  {
-    title: "Thrift Store - Ecommerce",
-    siteUrl: "https://subedisandesh7.com.np",
-    codeUrl: "",
-    imageUrl: "/images/projects/thriftstorehome.png",
-    description:
-      "Thrift store is an ecommerce site where you can easily sell your unused clothes.",
+      "Safebook is a site where you can post stories and experiences or chat with friends.",
   },
 ];
 
 const MyProjects = () => {
   return (
-    <div className="min-h-screen flex flex-col gap-7 justify-evenly items-center py-8 px-14 dark:bg-dot-white/[0.2] bg-dot-black/[0.2] pb-4">
+    <div className="min-h-screen flex flex-col gap-7 justify-evenly items-center py-4 px-7 md:py-8 md:px-14 dark:bg-dot-white/[0.2] bg-dot-black/[0.2] pb-4">
       <div className="text-center">
         <h2 className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ... bg-clip-text text-transparent text-2xl md:text-5xl md:leading-[3.5rem] font-bold tracking-wide mb-2">
           Projects I Have Built
         </h2>
-        <p className="text-[#1a1919] dark:text-[#A0988C] text-xl tracking-wide">
+        <p className="text-[#1a1919] dark:text-[#A0988C] text-lg md:text-xl tracking-wide">
           Some of my projects from past few years as a web developer.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-6 pb-4">
         {Projects.map((project, index) => {
           return (
-            <div className="" key={index}>
+            <div className="max-w-[80%] md:max-w-[25%]" key={index}>
               <DirectionAwareHover
                 imageUrl={project.imageUrl}
                 codeUrl={project.codeUrl}
@@ -69,7 +69,7 @@ const MyProjects = () => {
               </DirectionAwareHover>
               <div className="mt-5">
                 <h4 className="text-lg font-bold">{project.title}</h4>
-                <p className="max-w-[90%]">{project.description}</p>
+                <span className="line-clamp-2">{project.description}</span>
               </div>
             </div>
           );

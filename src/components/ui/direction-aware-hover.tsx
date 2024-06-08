@@ -32,7 +32,7 @@ export const DirectionAwareHover = ({
     if (!ref.current) return;
 
     const direction = getDirection(event, ref.current);
-    console.log("direction", direction);
+    // console.log("direction", direction);
     switch (direction) {
       case 0:
         setDirection("top");
@@ -68,7 +68,7 @@ export const DirectionAwareHover = ({
       onMouseEnter={handleMouseEnter}
       ref={ref}
       className={cn(
-        "w-[12rem] h-[10rem] md:w-[22rem] md:h-[20rem] bg-transparent rounded-lg overflow-hidden group/card relative",
+        "w-auto h-[12rem] sm:h-[15rem] md:h-[20rem] bg-transparent rounded-lg overflow-hidden group/card relative",
         className
       )}
     >
@@ -94,8 +94,8 @@ export const DirectionAwareHover = ({
                 "h-full w-full object-cover scale-[1.15]",
                 imageClassName
               )}
-              width="500"
-              height="500"
+              width="1000"
+              height="1000"
               src={imageUrl}
             />
           </motion.div>
@@ -106,7 +106,7 @@ export const DirectionAwareHover = ({
               ease: "easeOut",
             }}
             className={cn(
-              "text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 text-center",
+              "text-white absolute bottom-4 left-4 z-40",
               childrenClassName
             )}
           >

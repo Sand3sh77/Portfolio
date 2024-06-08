@@ -20,7 +20,7 @@ export default function Home() {
 
   if (!isMounted) return null; // Prevents mismatches by ensuring the component only renders on the client
 
-  console.log(resolvedTheme);
+  // console.log(resolvedTheme);
 
   return (
     <main className="">

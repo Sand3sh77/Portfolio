@@ -14,7 +14,7 @@ const GetInTouch = () => {
   return (
     <div className="relative w-full overflow-hidden flex flex-col justify-center items-center min-h-screen  px-8 pt-10 pb-4">
       <div className="absolute inset-0 w-full h-full bg-[#E4E5EA] dark:bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
-      <Boxes />
+      <Boxes className="h-screen"/>
       <div className="z-50">
         <div className="text-center">
           <h2 className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ... bg-clip-text text-transparent text-3xl md:text-6xl md:leading-[3.5rem] font-bold tracking-wide">
