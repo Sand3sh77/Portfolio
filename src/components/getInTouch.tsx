@@ -21,15 +21,15 @@ const GetInTouch = () => {
             Get In Touch
           </h2>
           <p className="text-[#1a1919] dark:text-[#A0988C] text-xl tracking-wide mt-5">
-            I'm always excited to collaborate on new projects or discuss
+            I&apos;m always excited to collaborate on new projects or discuss
             innovative ideas. Whether you need a sleek design, a robust
-            application, or anything in between, I'm here to help. Let's work
+            application, or anything in between, I&apos;m here to help. Let&apos;s work
             together to bring your vision to life!
           </p>
         </div>
         <div className="flex flex-col items-center gap-10 mt-10">
           <a
-            href="mailto:subedisandesh0123@gmail.com?subject=Project%20Inquiry&body=Hi%20Sandesh,%0D%0A%0D%0AI'd%20like%20to%20discuss%20a%20project%20with%20you.%0D%0A%0D%0AThanks!"
+            href="mailto:subedisandesh0123@gmail.com?subject=Project%20Inquiry&amp;body=Hi%20Sandesh,%0D%0A%0D%0AI&apos;d%20like%20to%20discuss%20a%20project%20with%20you.%0D%0A%0D%0AThanks!"
             target="_blank"
             rel="noopener noreferrer"
           >
