@@ -33,7 +33,7 @@ const Projects = [
 
 const MyProjects = () => {
   return (
-    <div className="min-h-screen flex flex-col gap-7 justify-evenly items-center pt-16 px-14">
+    <div className="min-h-screen flex flex-col gap-7 justify-evenly items-center py-8 px-14 dark:bg-dot-white/[0.2] bg-dot-black/[0.2] pb-4">
       <div className="text-center">
         <h2 className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ... bg-clip-text text-transparent text-2xl md:text-5xl md:leading-[3.5rem] font-bold tracking-wide mb-2">
           Projects I Have Built

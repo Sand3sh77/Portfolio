@@ -1,8 +1,10 @@
 "use client";
 
 import AboutMe from "@/components/aboutMe";
+import GetInTouch from "@/components/getInTouch";
 import { HeroSection } from "@/components/heroSection";
 import MyProjects from "@/components/myProjects";
+import SkillCertifications from "@/components/skillCertifications";
 import TechStack from "@/components/techStack";
 import { Vortex } from "@/components/ui/vortex";
 import { useTheme } from "next-themes";
@@ -35,6 +37,8 @@ export default function Home() {
         <AboutMe />
         <TechStack />
         <MyProjects />
+        <SkillCertifications />
+        <GetInTouch />
       </div>
     </main>
   );

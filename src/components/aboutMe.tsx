@@ -10,14 +10,14 @@ const AboutMe = () => {
         </h2>
         <div className="flex flex-col gap-4 mt-6 text-xl tracking-wide text-[#1d1c1c] dark:text-[#A0988C]">
           <p className="">
-            👋 Hey there! I’m Sandesh Subedi, a full-stack web designer and
+            👋 Hey there! I&apos;m Sandesh Subedi, a full-stack web designer and
             developer based in Pokhara, Nepal.
           </p>
 
           <p className="">
             I thrive on challenges and am always eager to learn new things.
-            Whether it’s a complex algorithm or a sleek UI, I’m excited to
-            tackle it head-on.
+            Whether it&apos;s a complex algorithm or a sleek UI, I&apos;m
+            excited to tackle it head-on.
           </p>
 
           <p className="">
@@ -27,9 +27,9 @@ const AboutMe = () => {
           </p>
 
           <p className="">
-            Feel free to reach out if you're ready to embark on a journey of
-            innovation and excellence. Let's collaborate and build something
-            extraordinary together.
+            Feel free to reach out if you&apos;re ready to embark on a journey
+            of innovation and excellence. Let&apos;s collaborate and build
+            something extraordinary together.
           </p>
 
           <a

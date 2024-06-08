@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
@@ -14,9 +14,34 @@ import {
 
 const Navbar = () => {
   const { setTheme } = useTheme();
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        // Scroll down
+        setShowNavbar(false);
+      } else {
+        // Scroll up
+        setShowNavbar(true);
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
 
   return (
-    <section className="fixed top-0 left-0 w-full z-50 h-20 bg-[#f3f4f7c0] dark:bg-[#151932d2]">
+    <section
+      className={`fixed top-0 left-0 w-full z-50 h-20 transition-transform duration-300 ${
+        showNavbar ? "translate-y-0" : "-translate-y-full"
+      } bg-[#f3f4f7c0] dark:bg-[#151932d2]`}
+    >
       <div className="h-full w-[90%] m-auto flex justify-between items-center">
         <div className="flex gap-5">
           {/* <div>Burger</div> */}
@@ -35,7 +60,7 @@ const Navbar = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent
               align="end"
-              className="bg-[#dee0e6d2] text-[#1f1e1e] dark:text-[#c2b7c5] dark:bg-[#1E2637]"
+              className="bg-[#dee0e6] text-[#1f1e1e] dark:text-[#c2b7c5] dark:bg-[#1E2637]"
             >
               <DropdownMenuItem
                 onClick={() => setTheme("light")}
