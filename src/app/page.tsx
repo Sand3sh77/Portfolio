@@ -30,7 +30,7 @@ export default function Home() {
           rangeY={resolvedTheme == "light" ? 250 : 200}
           particleCount={resolvedTheme == "light" ? 150 : 100}
           baseHue={resolvedTheme == "light" ? 180 : 200}
-          className="flex items-stretch flex-col justify-center px-12 py-4 w-full h-full"
+          className="flex items-center flex-col justify-center px-6 py-2 md:px-12 md:py-4 gap-6 md:gap-10 xl:gap-20 w-full h-full"
         >
           <HeroSection />
         </Vortex>

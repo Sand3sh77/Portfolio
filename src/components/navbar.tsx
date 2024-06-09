@@ -36,22 +36,22 @@ const Navbar = () => {
 
   return (
     <section
-      className={`fixed top-0 left-0 w-full z-50 h-20 transition-transform duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 h-16 md:h-20 transition-transform duration-300 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       } bg-[#f3f4f7c0] dark:bg-[#151932d2]`}
     >
       <div className="h-full w-[90%] m-auto flex justify-between items-center">
         <div className="flex gap-5">
-          <div className="text-lg md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500">
+          <div className="text-base md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500">
             {" { " + "dev.sandesh.com" + " } "}
           </div>
         </div>
         <div className="flex gap-2 md:gap-5">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <div className="flex justify-center items-center h-10 md:h-12 px-4 py-3 text-base font-semibold tracking-widest cursor-pointer rounded bg-[#dee0e6d2] text-[#1f1e1e] dark:bg-[#1E2637] dark:text-[#c2b7c5]">
-                <Sun className="h-[1.2rem] w-[1.2rem] transition-all rotate-0 scale-100 dark:-rotate-90 dark:scale-0" />
-                <Moon className="absolute h-[1.2rem] w-[1.2rem] transition-all rotate-90 scale-0 dark:rotate-0 dark:scale-100" />
+              <div className="flex justify-center items-center h-[2.3rem] md:h-[2.8rem] px-3 md:px-4 py-3 text-base font-semibold tracking-widest cursor-pointer rounded bg-[#dee0e6d2] text-[#1f1e1e] dark:bg-[#1E2637] dark:text-[#c2b7c5]">
+                <Sun className="h-[1rem] w-[1rem] md:h-[1.2rem] md:w-[1.2rem] transition-all rotate-0 scale-100 dark:-rotate-90 dark:scale-0" />
+                <Moon className="absolute h-[1rem] w-[1rem] md:h-[1.2rem] md:w-[1.2rem] transition-all rotate-90 scale-0 dark:rotate-0 dark:scale-100" />
                 <span className="sr-only">Toggle theme</span>
               </div>
             </DropdownMenuTrigger>
@@ -80,7 +80,7 @@ const Navbar = () => {
             </DropdownMenuContent>
           </DropdownMenu>
           <a href="/files/resume.pdf" target="_blank" rel="noopener noreferrer">
-            <div className="px-5 py-2 text-base font-semibold tracking-widest cursor-pointer rounded bg-[#dee0e6d2] text-[#1f1e1e] dark:bg-[#1E2637] dark:text-[#c2b7c5] md:px-8 md:py-3">
+            <div className="px-2 py-2 text-sm md:font-semibold tracking-wide md:tracking-widest cursor-pointer rounded bg-[#dee0e6d2] text-[#1f1e1e] dark:bg-[#1E2637] dark:text-[#c2b7c5] md:px-8 md:py-3">
               RESUME
             </div>
           </a>

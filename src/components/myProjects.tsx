@@ -33,19 +33,19 @@ const Projects = [
 
 const MyProjects = () => {
   return (
-    <div className="min-h-screen flex flex-col gap-7 justify-evenly items-center py-4 px-7 md:py-8 md:px-14 dark:bg-dot-white/[0.2] bg-dot-black/[0.2] pb-4">
+    <div className="min-h-screen flex flex-col gap-4 md:gap-10 lg:gap-16 xl:gap-26 justify-center items-center py-4 px-7 md:py-8 md:px-14 dark:bg-dot-white/[0.2] bg-dot-black/[0.2] pb-4">
       <div className="text-center">
-        <h2 className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ... bg-clip-text text-transparent text-2xl md:text-5xl md:leading-[3.5rem] font-bold tracking-wide mb-2">
+        <h2 className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ... bg-clip-text text-transparent text-2xl md:text-4xl md:leading-[3.5rem] font-bold tracking-wide mb-2">
           Projects I Have Built
         </h2>
-        <p className="text-[#1a1919] dark:text-[#A0988C] text-lg md:text-xl tracking-wide">
+        <p className="text-[#1a1919] dark:text-[#A0988C] text-base md:text-xl tracking-wide">
           Some of my projects from past few years as a web developer.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-6 pb-4">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-6 pb-4">
         {Projects.map((project, index) => {
           return (
-            <div className="max-w-[80%] md:max-w-[25%]" key={index}>
+            <div className="max-w-[80%] md:max-w-[70%] lg:max-w-[25%]" key={index}>
               <DirectionAwareHover
                 imageUrl={project.imageUrl}
                 codeUrl={project.codeUrl}

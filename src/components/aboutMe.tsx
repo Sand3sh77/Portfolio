@@ -3,12 +3,12 @@ import { Button } from "./ui/moving-border";
 
 const AboutMe = () => {
   return (
-    <div className="h-screen flex flex-col-reverse md:flex-row gap-16 md:gap-0 justify-center md:justify-between items-center px-12 dark:bg-grid-small-white/[0.2] bg-grid-small-[#0000]/[0.2]">
+    <div className="min-h-screen flex flex-col-reverse md:flex-row gap-16 md:gap-10 xl:gap-32 justify-center items-center px-6 md:px-12 dark:bg-grid-small-white/[0.2] bg-grid-small-[#0000]/[0.2]">
       <div className="w-[100%] md:w-[55%]">
         <h2 className="text-2xl md:text-5xl font-bold tracking-wide mb-2 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500">
           About Me
         </h2>
-        <div className="flex flex-col gap-4 mt-6 text-xl tracking-wide text-[#1d1c1c] dark:text-[#A0988C]">
+        <div className="flex flex-col gap-4 mt-2 md:mt-6 text-sm md:text-lg lg:text-xl tracking-wide text-[#1d1c1c] dark:text-[#A0988C]">
           <p>
             👋 Hey there! I&apos;m Sandesh Subedi, a full-stack web designer and
             developer based in Pokhara, Nepal.
@@ -41,19 +41,19 @@ const AboutMe = () => {
               borderRadius="0.5rem"
               className="border-0 bg-[#FFFFFF] dark:bg-[#1E2637]"
             >
-              <span className="text-[1.05rem] font-bold tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500">
+              <span className="text-base md:text-[1.05rem] font-bold tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500">
                 Open LinkedIn
               </span>
             </Button>
           </a>
         </div>
       </div>
-      <div className="w-[40%] text-[#FFFFFF]">
+      <div className="relative w-[12rem] h-[12rem] md:w-[20rem] md:h-[20rem] xl:w-[30rem] xl:h-[25rem] flex justify-center items-center text-[#FFFFFF]">
         <Image
           src="/svg/undraw_website_u6x8.svg"
           alt="Cover Image"
-          width={400}
-          height={350}
+          layout="fill"
+          objectFit="contain"
           className=""
         />
       </div>

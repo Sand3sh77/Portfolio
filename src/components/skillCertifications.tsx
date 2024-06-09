@@ -18,7 +18,7 @@ const blogContent: BlogContent[] = [
     date: "15th March, 2024",
     title: "PNC-Muroran Collaboration",
     description:
-      "This is provided by PNC after copletion of acsdameic collboration with Muroran Institute of Technology, Japan.",
+      "Provided by PNC after completion of acadameic collaboration with Muroran Institute of Technology, Japan.",
     image: "/images/certifications/collaboration.jpg",
     authorAvatar: "/images/certifications/author/pnc.png",
   },
@@ -28,7 +28,7 @@ const blogContent: BlogContent[] = [
     date: "23rd June, 2023",
     title: "Backend with PHP and Laravel",
     description:
-      "This is provided by Association of CSIT students-ACS after joining the Backend program with PHP and Laravel.",
+      "Provided by Association of CSIT students-ACS after joining the Backend program with PHP and Laravel.",
     image: "/images/certifications/php.png",
     authorAvatar: "/images/certifications/author/acs.png",
   },
@@ -36,9 +36,9 @@ const blogContent: BlogContent[] = [
     slug: "duolingo",
     author: "Duolingo",
     date: "29th Feb, 2024",
-    title: "Duolingo English Proficiency Practice",
+    title: "Duolingo English Proficiency Test",
     description:
-      "This is provided by Duolingo website after giving a one-hour English proficiency test.",
+      "Provided by Duolingo after passing the English proficiency test.",
     image: "/images/certifications/duolingo.png",
     authorAvatar: "/images/certifications/author/duolingo.png",
   },
@@ -69,13 +69,13 @@ const SkillCertifications: React.FC = () => {
         <h2 className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ... bg-clip-text text-transparent text-2xl md:text-5xl md:leading-[3.5rem] font-bold tracking-wide">
           Skill Certifications
         </h2>
-        <p className="text-[#1a1919] dark:text-[#A0988C] text-xl tracking-wide">
+        <p className="text-[#1a1919] dark:text-[#A0988C] text-base md:text-xl tracking-wide">
           Some of the skill certifications I received.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row justify-evenly items-center gap-5 mt-8">
+      <div className="flex flex-col lg:flex-row justify-evenly items-center gap-5 mt-8">
         {blogContent.map((item) => (
-          <div key={item.slug} className="w-[25rem] md:w-80 mx-auto">
+          <div key={item.slug} className="w-[20rem] md:w-[25rem] lg:w-[20rem] mx-auto">
             <FollowerPointerCard
               title={
                 <TitleComponent

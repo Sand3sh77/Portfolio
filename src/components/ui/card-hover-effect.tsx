@@ -77,7 +77,7 @@ export const Card = ({
       style={{ color: isHovered ? hover : undefined }}
     >
       <div className="relative z-50">
-        <div className="p-4">{children}</div>
+        <div className="p-0 md:p-4">{children}</div>
       </div>
     </div>
   );
