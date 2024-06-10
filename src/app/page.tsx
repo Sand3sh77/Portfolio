@@ -4,6 +4,7 @@ import AboutMe from "@/components/aboutMe";
 import GetInTouch from "@/components/getInTouch";
 import { HeroSection } from "@/components/heroSection";
 import MyProjects from "@/components/myProjects";
+import Navbar from "@/components/navbar";
 import SkillCertifications from "@/components/skillCertifications";
 import TechStack from "@/components/techStack";
 import { Vortex } from "@/components/ui/vortex";
@@ -25,6 +26,7 @@ export default function Home() {
   return (
     <main className="">
       <div className="w-full mx-auto rounded-md overflow-hidden bg-[#dee0e6d2] dark:bg-[#0C1222]">
+        <Navbar/>
         <Vortex
           backgroundColor="transparent"
           rangeY={resolvedTheme == "light" ? 250 : 200}

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Raleway } from "next/font/google";
-import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 
 <link
@@ -31,9 +30,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div>
-            <Navbar />
-          </div>
           {children}
         </ThemeProvider>
       </body>
