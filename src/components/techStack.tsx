@@ -57,7 +57,10 @@ const TechStack = () => {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen max-w-5xl mx-auto p-4 md:p-8">
+    <section
+      id="skills"
+      className="flex flex-col justify-center items-center min-h-screen max-w-5xl mx-auto p-4 md:p-8"
+    >
       <div className="text-center">
         <h2 className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ... bg-clip-text text-transparent text-2xl md:text-5xl md:leading-[3.5rem] font-bold tracking-wide">
           Tech Stack
@@ -69,7 +72,7 @@ const TechStack = () => {
       <div className="w-[90%]">
         <HoverEffect items={projects} />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { useTheme } from "next-themes";
 import {
   DropdownMenu,
@@ -9,6 +10,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import Navigation from "./navigation";
 
 const Navbar = () => {
   const { setTheme } = useTheme();
@@ -41,7 +43,20 @@ const Navbar = () => {
       } bg-[#f3f4f7c0] dark:bg-[#151932d2]`}
     >
       <div className="h-full w-[90%] m-auto flex justify-between items-center">
-        <div className="flex gap-5">
+        <div className="flex gap-5 justify-center items-center">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <div className="flex justify-center items-center h-[2.3rem] md:h-[2.8rem] p-3 text-xl font-semibold tracking-widest cursor-pointer rounded bg-[#dee0e6d2] text-[#1f1e1e] dark:bg-[#1E2637] dark:text-[#c2b7c5]">
+                <RxHamburgerMenu className="h-[1rem] w-[1rem] md:h-[1.5rem] md:w-[1.5rem]" />
+              </div>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent
+              align="start"
+              className="bg-[#dee0e6] text-[#1f1e1e] dark:bg-[#1E2637] dark:text-[#c2b7c5]"
+            >
+              <Navigation />
+            </DropdownMenuContent>
+          </DropdownMenu>
           <div className="text-base md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500">
             {" { " + "dev.sandesh.com" + " } "}
           </div>

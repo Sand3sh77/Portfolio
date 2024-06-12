@@ -77,6 +77,10 @@
 }
 
 @layer utilities {
+  * {
+    scroll-behavior: smooth;
+  }
+
   .text-balance {
     text-wrap: balance;
   }

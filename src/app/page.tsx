@@ -9,28 +9,18 @@ import SkillCertifications from "@/components/skillCertifications";
 import TechStack from "@/components/techStack";
 import { Vortex } from "@/components/ui/vortex";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 
 export default function Home() {
   const { theme, resolvedTheme } = useTheme();
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) return null; // Prevents mismatches by ensuring the component only renders on the client
-
-  // console.log(resolvedTheme);
 
   return (
     <main className="">
       <div className="w-full mx-auto rounded-md overflow-hidden bg-[#dee0e6d2] dark:bg-[#0C1222]">
-        <Navbar/>
+        <Navbar />
         <Vortex
           backgroundColor="transparent"
-          rangeY={resolvedTheme == "light" ? 250 : 200}
-          particleCount={resolvedTheme == "light" ? 150 : 100}
+          rangeY={resolvedTheme == "light" ? 200 : 150}
+          particleCount={resolvedTheme == "light" ? 100 : 80}
           baseHue={resolvedTheme == "light" ? 180 : 200}
           className="flex items-center flex-col justify-center px-6 py-2 md:px-12 md:py-4 gap-6 md:gap-10 xl:gap-20 w-full h-full"
         >

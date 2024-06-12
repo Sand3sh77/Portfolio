@@ -4,7 +4,10 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <section className="relative top-8 flex flex-col-reverse md:flex-row justify-center md:justify-between align-middle gap-8 md:gap-0 min-h-screen">
+    <section
+      id="home"
+      className="relative top-8 flex flex-col-reverse md:flex-row justify-center md:justify-between align-middle gap-8 md:gap-0 min-h-screen"
+    >
       <div className="left-cont w-[100%] sm:w-[90%] md:w-[65%] mx-auto md:m-0 flex flex-col justify-center">
         <h2 className="text-xl md:text-3xl lg:text-5xl font-bold tracking-wide mb-2 text-[#1a1919] dark:text-[#A0988C]">
           Frontend Designer +

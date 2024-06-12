@@ -3,7 +3,7 @@ import { Button } from "./ui/moving-border";
 
 const AboutMe = () => {
   return (
-    <div className="min-h-screen flex flex-col-reverse md:flex-row gap-16 md:gap-10 xl:gap-32 justify-center items-center px-6 md:px-12 dark:bg-grid-small-white/[0.2] bg-grid-small-[#0000]/[0.2]">
+    <section id="about" className="min-h-screen flex flex-col-reverse md:flex-row gap-16 md:gap-10 xl:gap-32 justify-center items-center px-6 md:px-12 dark:bg-grid-small-white/[0.2] bg-grid-small-[#0000]/[0.2]">
       <div className="w-[100%] md:w-[55%]">
         <h2 className="text-2xl md:text-5xl font-bold tracking-wide mb-2 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500">
           About Me
@@ -57,7 +57,7 @@ const AboutMe = () => {
           className=""
         />
       </div>
-    </div>
+    </section>
   );
 };
 
