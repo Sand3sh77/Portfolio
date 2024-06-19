@@ -23,6 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="icon" href="/images/favicon.png" sizes="any" />
       <body className={font.className}>
         <ThemeProvider
           attribute="class"
