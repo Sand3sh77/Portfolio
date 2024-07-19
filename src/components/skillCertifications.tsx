@@ -13,6 +13,16 @@ interface BlogContent {
 
 const blogContent: BlogContent[] = [
   {
+    slug: "hackathon",
+    author: "Free Students Union-PEC",
+    date: "16th June, 2024",
+    title: "Winner of Yantra Hackathon",
+    description:
+      "Provided by Free Students Union-Pokhara Engineering College after winning the 36 hour Yantra hackathon.",
+    image: "/images/certifications/hackathon.jpg",
+    authorAvatar: "/images/certifications/author/pec.png",
+  },
+  {
     slug: "collaboration",
     author: "Prithivi Narayan Campus",
     date: "15th March, 2024",
@@ -32,16 +42,16 @@ const blogContent: BlogContent[] = [
     image: "/images/certifications/php.png",
     authorAvatar: "/images/certifications/author/acs.png",
   },
-  {
-    slug: "duolingo",
-    author: "Duolingo",
-    date: "29th Feb, 2024",
-    title: "Duolingo English Proficiency Test",
-    description:
-      "Provided by Duolingo after passing the English proficiency test.",
-    image: "/images/certifications/duolingo.png",
-    authorAvatar: "/images/certifications/author/duolingo.png",
-  },
+  // {
+  //   slug: "duolingo",
+  //   author: "Duolingo",
+  //   date: "29th Feb, 2024",
+  //   title: "Duolingo English Proficiency Test",
+  //   description:
+  //     "Provided by Duolingo after passing the English proficiency test.",
+  //   image: "/images/certifications/duolingo.png",
+  //   authorAvatar: "/images/certifications/author/duolingo.png",
+  // },
 ];
 
 interface TitleComponentProps {
@@ -64,7 +74,10 @@ const TitleComponent: React.FC<TitleComponentProps> = ({ title, avatar }) => (
 
 const SkillCertifications: React.FC = () => {
   return (
-    <section id="certificates" className="flex flex-col justify-center items-center min-h-screen max-w-5xl mx-auto p-8">
+    <section
+      id="certificates"
+      className="flex flex-col justify-center items-center min-h-screen max-w-5xl mx-auto p-8"
+    >
       <div className="text-center">
         <h2 className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ... bg-clip-text text-transparent text-2xl md:text-5xl md:leading-[3.5rem] font-bold tracking-wide">
           Skill Certifications
@@ -75,7 +88,10 @@ const SkillCertifications: React.FC = () => {
       </div>
       <div className="flex flex-col lg:flex-row justify-evenly items-center gap-5 mt-8">
         {blogContent.map((item) => (
-          <div key={item.slug} className="w-[20rem] md:w-[25rem] lg:w-[20rem] mx-auto">
+          <div
+            key={item.slug}
+            className="w-[20rem] md:w-[25rem] lg:w-[20rem] mx-auto"
+          >
             <FollowerPointerCard
               title={
                 <TitleComponent

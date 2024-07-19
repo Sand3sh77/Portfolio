@@ -58,7 +58,7 @@ const Navbar = () => {
             </DropdownMenuContent>
           </DropdownMenu>
           <div className="text-base md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500">
-            {" { " + "dev.sandesh.com" + " } "}
+            {" { " + "subedisandesh7.com.np" + " } "}
           </div>
         </div>
         <div className="flex gap-2 md:gap-5">

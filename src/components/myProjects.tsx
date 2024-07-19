@@ -6,16 +6,8 @@ import { Button } from "./ui/moving-border";
 
 const Projects = [
   {
-    title: "Thrift Store - Ecommerce",
-    siteUrl: "https://subedisandesh7.com.np",
-    codeUrl: "",
-    imageUrl: "/images/projects/thriftstorehome.png",
-    description:
-      "Thrift store is an ecommerce site where you can easily sell your unused clothes.",
-  },
-  {
     title: "QuizHunt - Create,Share,Play",
-    siteUrl: "",
+    siteUrl: "https://quiz-hunt.vercel.app",
     codeUrl: "",
     imageUrl: "/images/projects/quizhunthome.png",
     description:
@@ -29,11 +21,22 @@ const Projects = [
     description:
       "Safebook is a site where you can post stories and experiences or chat with friends.",
   },
+  {
+    title: "Thrift Store - Ecommerce",
+    siteUrl: "",
+    codeUrl: "",
+    imageUrl: "/images/projects/thriftstorehome.png",
+    description:
+      "Thrift store is an ecommerce site where you can easily sell your unused clothes.",
+  },
 ];
 
 const MyProjects = () => {
   return (
-    <section id="projects" className="min-h-screen flex flex-col gap-4 md:gap-10 lg:gap-16 xl:gap-26 justify-center items-center py-4 px-7 md:py-8 md:px-14 dark:bg-dot-white/[0.2] bg-dot-black/[0.2] pb-4">
+    <section
+      id="projects"
+      className="min-h-screen flex flex-col gap-4 md:gap-10 lg:gap-16 xl:gap-26 justify-center items-center py-4 px-7 md:py-8 md:px-14 dark:bg-dot-white/[0.2] bg-dot-black/[0.2] pb-4"
+    >
       <div className="text-center">
         <h2 className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ... bg-clip-text text-transparent text-2xl md:text-4xl md:leading-[3.5rem] font-bold tracking-wide mb-2">
           Projects I Have Built
@@ -45,7 +48,10 @@ const MyProjects = () => {
       <div className="flex flex-col lg:flex-row justify-center items-center gap-6 pb-4">
         {Projects.map((project, index) => {
           return (
-            <div className="max-w-[80%] md:max-w-[70%] lg:max-w-[25%]" key={index}>
+            <div
+              className="max-w-[80%] md:max-w-[70%] lg:max-w-[25%]"
+              key={index}
+            >
               <DirectionAwareHover
                 imageUrl={project.imageUrl}
                 codeUrl={project.codeUrl}
