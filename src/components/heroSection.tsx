@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Button } from "./ui/moving-border";
 import Image from "next/image";
 
 export function HeroSection() {
+  const imageRef = useRef(null);
+  const triggerRef = useRef(null);
+
   return (
     <section
       id="home"
@@ -35,7 +38,10 @@ export function HeroSection() {
           </a>
         </div>
       </div>
-      <div className="right-cont flex flex-col justify-center items-center w-[50%] md:w-auto mx-auto md:h-auto">
+      <div
+        className="right-cont flex flex-col justify-center items-center w-[50%] md:w-auto mx-auto md:h-auto"
+        ref={imageRef}
+      >
         <div className="relative w-[15rem] h-[15rem] md:w-[20rem] md:h-[20rem] xl:w-[25rem] xl:h-[25rem] rounded-full overflow-hidden border-4 border-[#1a1919] dark:border-gray-500">
           <Image
             src="/images/cover_image.png"
