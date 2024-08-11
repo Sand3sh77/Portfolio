@@ -7,6 +7,7 @@ import MyProjects from "@/components/myProjects";
 import Navbar from "@/components/navbar";
 import SkillCertifications from "@/components/skillCertifications";
 import TechStack from "@/components/techStack";
+import Timeline from "@/components/timeline";
 import { Vortex } from "@/components/ui/vortex";
 import { useTheme } from "next-themes";
 
@@ -28,6 +29,8 @@ export default function Home() {
         </Vortex>
         <AboutMe />
         <TechStack />
+        {/* <Career /> */}
+        <Timeline />
         <MyProjects />
         <SkillCertifications />
         <GetInTouch />
