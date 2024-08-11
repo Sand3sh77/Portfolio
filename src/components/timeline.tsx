@@ -108,10 +108,10 @@ const Timeline = () => {
                 <div className="col anim flex gap-[3em]">
                   <p className="text-[.9rem] w-[50vw]">
                     Born in Pokhara on January 28, 2005, a city renowned as
-                    Nepal's tourism capital and a potential tech hub, my early
-                    years surrounded by natural beauty shaped my perspective on
-                    life. This environment sparked my interest in technology and
-                    future career path.
+                    Nepal&apos;s tourism capital and a potential tech hub, my
+                    early years surrounded by natural beauty shaped my
+                    perspective on life. This environment sparked my interest in
+                    technology and future career path.
                   </p>
                 </div>
               </div>
@@ -138,8 +138,8 @@ const Timeline = () => {
                       +2 in Science from the same school with a GPA of 3.30
                     </li>
                     <li>
-                      Although I had a keen interest in technology, I didn’t
-                      dive deep into it during this period.
+                      Although I had a keen interest in technology, I
+                      didn&apos;t dive deep into it during this period.
                     </li>
                   </ul>
                 </div>
