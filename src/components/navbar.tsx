@@ -42,8 +42,8 @@ const Navbar = () => {
         showNavbar ? "translate-y-0" : "-translate-y-full"
       } bg-[#f3f4f7c0] dark:bg-[#151932d2]`}
     >
-      <div className="h-full w-[90%] m-auto flex justify-between items-center">
-        <div className="flex gap-5 justify-center items-center">
+      <div className="h-full w-[96%] sm:w-[90%] m-auto flex justify-between items-center">
+        <div className="flex gap-2 sm:gap-5 justify-center items-center">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <div className="flex justify-center items-center h-[2.3rem] md:h-[2.8rem] p-3 text-xl font-semibold tracking-widest cursor-pointer rounded bg-[#dee0e6d2] text-[#1f1e1e] dark:bg-[#1E2637] dark:text-[#c2b7c5]">
@@ -57,7 +57,7 @@ const Navbar = () => {
               <Navigation />
             </DropdownMenuContent>
           </DropdownMenu>
-          <div className="text-base md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500">
+          <div className="text-sm md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500">
             {" { " + "subedisandesh7.com.np" + " } "}
           </div>
         </div>

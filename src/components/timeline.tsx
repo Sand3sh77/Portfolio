@@ -58,7 +58,7 @@ const Timeline = () => {
 
   return (
     <>
-      <div className="wrapper overflow-hidden">
+      <div className="wrapper overflow-hidden hidden md:block">
         <div ref={triggerRef}>
           <h2 className="text-center pt-16 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ... bg-clip-text text-transparent text-2xl md:text-5xl md:leading-[3.5rem] font-bold tracking-wide">
             TIMELINE
