@@ -14,7 +14,7 @@ const AboutMe = () => {
         <div className="flex flex-col gap-2 mt-4 md:mt-8 text-base md:text-lg lg:text-xl tracking-wide text-[#1d1c1c] dark:text-[#A0988C]">
           <div className="space-y-2">
             <p className="text-lg md:text-xl lg:text-2xl leading-relaxed">
-              Hi, I’m{" "}
+              Hi, I&apos;m{" "}
               <span className="font-semibold text-indigo-500 dark:text-sky-400">
                 Sandesh Subedi
               </span>
@@ -77,11 +77,11 @@ const AboutMe = () => {
               </span>
               <div>
                 <p className="font-medium text-[#333] dark:text-[#D6D5D4]">
-                  <strong>Let’s connect!</strong>
+                  <strong>Let&apos;s connect!</strong>
                 </p>
                 <p className="text-[#555] dark:text-[#B8B8B8]">
-                  Ready to collaborate and build something extraordinary? I’m
-                  here to help.
+                  Ready to collaborate and build something extraordinary?
+                  I&apos;m here to help.
                 </p>
               </div>
             </div>

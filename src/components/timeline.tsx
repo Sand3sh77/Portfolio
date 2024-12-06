@@ -105,7 +105,8 @@ const Timeline = () => {
                 <h3 className="text-xl font-bold">Born in Pokhara</h3>
                 <ul className="text-lg list-disc pl-6">
                   <li>
-                    🌄 Born on January 28, 2005, in Nepal's tourism capital.
+                    🌄 Born on January 28, 2005, in Nepal&apos;s tourism
+                    capital.
                   </li>
                   <li>
                     🚀 Fascinated by space science and technology as a child.
@@ -140,8 +141,8 @@ const Timeline = () => {
                   </li>
                   <li>🎓 +2 in Science with GPA 3.30.</li>
                   <li>
-                    🔍 Developed a budding interest in tech but didn’t deeply
-                    pursue it yet.
+                    🔍 Developed a budding interest in tech but didn&apos;t
+                    deeply pursue it yet.
                   </li>
                 </ul>
               </div>
