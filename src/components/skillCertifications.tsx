@@ -23,25 +23,35 @@ const blogContent: BlogContent[] = [
     authorAvatar: "/images/certifications/author/pec.png",
   },
   {
+    slug: "30dayschallenge",
+    author: "Learning Utsav",
+    date: "21st November, 2024",
+    title: "30 Days Learning Challenge",
+    description:
+      "Provided by Learning Utsav after the succesful completion of the 30 days learning challenge.",
+    image: "/images/certifications/30dayschallenge.png",
+    authorAvatar: "/images/certifications/author/learning_utsav_logo.jpg",
+  },
+  {
     slug: "collaboration",
     author: "Prithivi Narayan Campus",
     date: "15th March, 2024",
     title: "PNC-Muroran Collaboration",
     description:
-      "Provided by PNC after completion of acadameic collaboration with Muroran Institute of Technology, Japan.",
+      "Provided by PNC after completion of academic collaboration with Muroran Institute of Technology, Japan.",
     image: "/images/certifications/collaboration.jpg",
     authorAvatar: "/images/certifications/author/pnc.png",
   },
-  {
-    slug: "backend-php",
-    author: "Association of CSIT Students",
-    date: "23rd June, 2023",
-    title: "Backend with PHP and Laravel",
-    description:
-      "Provided by Association of CSIT students-ACS after joining the Backend program with PHP and Laravel.",
-    image: "/images/certifications/php.png",
-    authorAvatar: "/images/certifications/author/acs.png",
-  },
+  // {
+  //   slug: "backend-php",
+  //   author: "Association of CSIT Students",
+  //   date: "23rd June, 2023",
+  //   title: "Backend with PHP and Laravel",
+  //   description:
+  //     "Provided by Association of CSIT students-ACS after joining the Backend program with PHP and Laravel.",
+  //   image: "/images/certifications/php.png",
+  //   authorAvatar: "/images/certifications/author/acs.png",
+  // },
   // {
   //   slug: "duolingo",
   //   author: "Duolingo",

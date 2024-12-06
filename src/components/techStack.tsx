@@ -1,8 +1,13 @@
 import Image from "next/image";
 import { HoverEffect } from "./ui/card-hover-effect";
 import { RiNextjsFill } from "react-icons/ri";
-import { FaReact, FaFigma, FaNodeJs } from "react-icons/fa";
-import { SiMongodb } from "react-icons/si";
+import {
+  FaReact,
+  FaFigma,
+  FaNodeJs,
+  FaCreativeCommonsPdAlt,
+} from "react-icons/fa";
+import { SiMongodb, SiPrisma } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiCplusplus, SiTypescript } from "react-icons/si";
@@ -15,9 +20,14 @@ const TechStack = () => {
       hover: "#78d5d0",
     },
     {
-      title: "React",
+      title: "React & ReactNative",
       svg: <FaReact className="h-[3rem] w-[3rem]" />,
       hover: "#60C7DE",
+    },
+    {
+      title: "Prisma",
+      svg: <SiPrisma className="h-[3rem] w-[3rem]" />,
+      hover: "#466391",
     },
     {
       title: "Javascript",
@@ -30,6 +40,11 @@ const TechStack = () => {
       hover: "#017acb",
     },
     {
+      title: "NodeJS",
+      svg: <FaNodeJs className="h-[3rem] w-[3rem]" />,
+      hover: "#8cc84b",
+    },
+    {
       title: "MySql",
       svg: <GrMysql className="h-[3rem] w-[3rem]" />,
       hover: "rgb(0,84,107)",
@@ -40,20 +55,15 @@ const TechStack = () => {
       hover: "#10AA50",
     },
     {
-      title: "NodeJS",
-      svg: <FaNodeJs className="h-[3rem] w-[3rem]" />,
-      hover: "#8cc84b",
-    },
-    {
       title: "C++",
       svg: <SiCplusplus className="h-[3rem] w-[3rem]" />,
       hover: "#5c8dbc",
     },
-    {
-      title: "Figma",
-      svg: <FaFigma className="h-[3rem] w-[3rem]" />,
-      hover: "",
-    },
+    // {
+    //   title: "Figma",
+    //   svg: <FaFigma className="h-[3rem] w-[3rem]" />,
+    //   hover: "",
+    // },
   ];
 
   return (
@@ -66,7 +76,7 @@ const TechStack = () => {
           Tech Stack
         </h2>
         <p className="text-[#1a1919] dark:text-[#A0988C] text-base md:text-xl tracking-wide">
-          Some of the tools I use for website design and development.
+          Some of the tools I use for web and mobile development.
         </p>
       </div>
       <div className="w-[90%]">

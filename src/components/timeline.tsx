@@ -99,87 +99,84 @@ const Timeline = () => {
             </g>
           </svg>
           <div className="flex relative h-[80vh] w-[300vw]" ref={sectionRef}>
+            {/* Section 1 */}
             <section className="flex justify-evenly items-start gap-12 w-[100vw] px-[12vw] py-[10vw]">
               <div className="w-[58%]">
-                <span className="anim">Born</span>
-                <h1 className="anim text-[3rem] m-0 font-[2rem]">
-                  Pokhara, 2005-01-28
-                </h1>
-                <div className="col anim flex gap-[3em]">
-                  <p className="text-[.9rem] w-[50vw]">
-                    Born in Pokhara on January 28, 2005, a city renowned as
-                    Nepal&apos;s tourism capital and a potential tech hub, my
-                    early years surrounded by natural beauty shaped my
-                    perspective on life. This environment sparked my interest in
-                    technology and future career path.
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold">Born in Pokhara</h3>
+                <ul className="text-lg list-disc pl-6">
+                  <li>
+                    🌄 Born on January 28, 2005, in Nepal's tourism capital.
+                  </li>
+                  <li>
+                    🚀 Fascinated by space science and technology as a child.
+                  </li>
+                  <li>
+                    📱 Explored gadgets, rooted devices, and tinkered with tech.
+                  </li>
+                  <li>
+                    🎮 Got scolded a lot for gaming and experimenting with
+                    devices.
+                  </li>
+                </ul>
               </div>
-              <div className="relative w-[25rem] h-[15rem] flex justify-center items-center text-[#FFFFFF]">
+              <div className="relative w-[25rem] h-[15rem]">
                 <Image
                   src="/svg/undraw_toy_car_-7-umw.svg"
-                  alt="Cover Image"
+                  alt="Born in Pokhara"
                   layout="fill"
                   objectFit="contain"
-                  className=""
                 />
               </div>
             </section>
-            <section className="flex justify-evenly items-center gap-12 w-[100vw] px-[12vw] py-[10vw]">
+            {/* Section 2 */}
+            <section className="flex justify-evenly items-start gap-12 w-[100vw] px-[12vw] py-[10vw]">
               <div className="w-[58%]">
-                <span className="anim">Completed Secondary Schooling</span>
-                <h1 className="anim text-[3rem] m-0 font-[2rem]">up to 2022</h1>
-                <div className="col anim flex gap-[3em]">
-                  <ul className="text-[.9rem] list-disc pl-6 w-[50vw]">
-                    <li>
-                      S.E.E from Amarsingh Secondary School with a GPA of 3.90
-                    </li>
-                    <li>
-                      +2 in Science from the same school with a GPA of 3.30
-                    </li>
-                    <li>
-                      Although I had a keen interest in technology, I
-                      didn&apos;t dive deep into it during this period.
-                    </li>
-                  </ul>
-                </div>
+                <h3 className="text-xl font-bold">
+                  Completed Secondary Schooling
+                </h3>
+                <ul className="text-lg list-disc pl-6">
+                  <li>
+                    🎓 S.E.E from Amarsingh Secondary School with GPA 3.90.
+                  </li>
+                  <li>🎓 +2 in Science with GPA 3.30.</li>
+                  <li>
+                    🔍 Developed a budding interest in tech but didn’t deeply
+                    pursue it yet.
+                  </li>
+                </ul>
               </div>
-              <div className="relative w-[25rem] h-[20rem] flex justify-center items-center text-[#FFFFFF]">
+              <div className="relative w-[25rem] h-[20rem]">
                 <Image
                   src="/images/Timeline/49571516_9233298-removebg-preview.png"
-                  alt="Cover Image"
+                  alt="Secondary Schooling"
                   layout="fill"
                   objectFit="contain"
-                  className=""
                 />
               </div>
             </section>
-
-            <section className="flex justify-evenly items-center gap-12 w-[100vw] px-[12vw] py-[10vw]">
+            {/* Section 3 */}
+            <section className="flex justify-evenly items-start gap-12 w-[100vw] px-[12vw] py-[10vw]">
               <div className="w-[58%]">
-                <span className="anim">Present</span>
-                <h1 className="anim text-[3rem] m-0 font-[2rem]">
-                  BSc CSIT, exp.2026
-                </h1>
-                <div className="col anim flex gap-[3em]">
-                  <ul className="text-[.9rem] list-disc pl-6 w-[50vw]">
-                    <li>
-                      Currently pursuing BSc CSIT at Prithvi Narayan Campus.
-                    </li>
-                    <li>Deeply explored various fields of technology.</li>
-                    <li>
-                      Currently mainly focused on web and mobile development.
-                    </li>
-                  </ul>
-                </div>
+                <h3 className="text-xl font-bold">
+                  Present: Pursuing BSc CSIT
+                </h3>
+                <ul className="text-lg list-disc pl-6">
+                  <li>
+                    🎯 Currently studying BSc CSIT at Prithvi Narayan Campus.
+                  </li>
+                  <li>
+                    💻 Exploring various fields of technology, with a focus on
+                    web and mobile development.
+                  </li>
+                  <li>🌐 Passionate about building impactful applications.</li>
+                </ul>
               </div>
-              <div className="relative w-[25rem] h-[20rem] flex justify-center items-center text-[#FFFFFF]">
+              <div className="relative w-[25rem] h-[20rem]">
                 <Image
                   src="/images/Timeline/programmer-working-isometric-style.png"
-                  alt="Cover Image"
+                  alt="Present"
                   layout="fill"
                   objectFit="contain"
-                  className=""
                 />
               </div>
             </section>
