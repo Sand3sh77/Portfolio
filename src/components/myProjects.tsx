@@ -17,7 +17,7 @@ const Projects = [
     title: "SafeBook - Social Media",
     siteUrl: "https://safebook.vercel.app",
     imageUrl: "/images/projects/safebookhome.png",
-    codeUrl: "https://github.com/Sand3sh77/SocialMediaApp",
+    codeUrl: "",
     description:
       "Safebook is a site where you can post stories and experiences or chat with friends.",
   },
