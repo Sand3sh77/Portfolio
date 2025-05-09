@@ -13,7 +13,7 @@ export function HeroSection() {
     >
       <div className="left-cont w-[100%] sm:w-[90%] md:w-[65%] mx-auto md:m-0 flex flex-col justify-center">
         <h2 className="text-xl md:text-3xl lg:text-5xl font-bold tracking-wide mb-2 text-[#1a1919] dark:text-[#A0988C]">
-          Frontend Designer +
+          Frontend Engineer +
         </h2>
         <h1 className="text-2xl md:text-5xl lg:text-7xl  font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500">
           Full-Stack Developer
