@@ -19,11 +19,12 @@ export function HeroSection() {
           Full-Stack Developer
         </h1>
         <p className="text-lg mt-6 md:mt-10 tracking-wide text-[#1a1919] dark:text-[#A0988C]">
-          Frontend Development using HTML, CSS, JS, TS, React, React Native
-          and Nextjs.
+          Frontend Development using HTML, CSS, JS, TS, React, React Native and
+          Nextjs.
           <br />
-          Backend using Node, Express, SQL, MongoDB, PHP & Prisma ORM. I can
-          assist in designing and building robust web applications.
+          Backend using Node.js, Nest.js, Express.js, SQL, MongoDB, PHP & Prisma
+          ORM.
+          <br />I can assist in designing and building robust web applications.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-6">
           <a href="/files/resume.pdf" target="_blank" rel="noopener noreferrer">

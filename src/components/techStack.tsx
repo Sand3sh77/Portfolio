@@ -7,7 +7,7 @@ import {
   FaNodeJs,
   FaCreativeCommonsPdAlt,
 } from "react-icons/fa";
-import { SiMongodb, SiPrisma } from "react-icons/si";
+import { SiMongodb, SiNestjs, SiPrisma } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiCplusplus, SiTypescript } from "react-icons/si";
@@ -25,9 +25,9 @@ const TechStack = () => {
       hover: "#60C7DE",
     },
     {
-      title: "Prisma",
-      svg: <SiPrisma className="h-[3rem] w-[3rem]" />,
-      hover: "#466391",
+      title: "Nest.js",
+      svg: <SiNestjs className="h-[3rem] w-[3rem]" />,
+      hover: "#E92853",
     },
     {
       title: "Javascript",
@@ -55,15 +55,10 @@ const TechStack = () => {
       hover: "#10AA50",
     },
     {
-      title: "C++",
-      svg: <SiCplusplus className="h-[3rem] w-[3rem]" />,
-      hover: "#5c8dbc",
+      title: "Prisma",
+      svg: <SiPrisma className="h-[3rem] w-[3rem]" />,
+      hover: "#466391",
     },
-    // {
-    //   title: "Figma",
-    //   svg: <FaFigma className="h-[3rem] w-[3rem]" />,
-    //   hover: "",
-    // },
   ];
 
   return (

@@ -43,6 +43,11 @@ const AboutMe = () => {
                   ,
                   <span className="font-medium text-indigo-500 dark:text-sky-400">
                     {" "}
+                    Nest.js
+                  </span>
+                  ,
+                  <span className="font-medium text-indigo-500 dark:text-sky-400">
+                    {" "}
                     Prisma
                   </span>
                   , and
