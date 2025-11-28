@@ -15,7 +15,7 @@ const Projects = [
   },
   {
     title: "SafeBook - Social Media",
-    siteUrl: "https://safebook.vercel.app",
+    // siteUrl: "https://safebook.vercel.app",
     imageUrl: "/images/projects/safebookhome.png",
     codeUrl: "",
     description:

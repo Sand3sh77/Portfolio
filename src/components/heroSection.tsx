@@ -9,7 +9,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative top-8 flex flex-col-reverse md:flex-row justify-center md:justify-between align-middle gap-8 md:gap-0 min-h-screen"
+      className="relative top-8 flex flex-col-reverse md:flex-row justify-center md:justify-between align-middle gap-8 md:gap-2 min-h-screen"
     >
       <div className="left-cont w-[100%] sm:w-[90%] md:w-[65%] mx-auto md:m-0 flex flex-col justify-center">
         <h2 className="text-xl md:text-3xl lg:text-5xl font-bold tracking-wide mb-2 text-[#1a1919] dark:text-[#A0988C]">
@@ -19,15 +19,13 @@ export function HeroSection() {
           Full-Stack Developer
         </h1>
         <p className="text-lg mt-6 md:mt-10 tracking-wide text-[#1a1919] dark:text-[#A0988C]">
-          Frontend Development using HTML, CSS, JS, TS, React, React Native and
-          Nextjs.
+          Frontend Development using React and Nextjs.
           <br />
-          Backend using Node.js, Nest.js, Express.js, SQL, MongoDB, PHP & Prisma
-          ORM.
-          <br />I can assist in designing and building robust web applications.
+          Backend using Node.js, Express.js and Nest.js.
+          <br />I can assist in building robust web applications.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-6">
-          <a href="/files/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="/files/resume_new.pdf" target="_blank" rel="noopener noreferrer">
             <Button
               borderRadius="0.5rem"
               className="border-0 bg-[#FFFFFF] dark:bg-[#1E2637]"
@@ -45,7 +43,7 @@ export function HeroSection() {
       >
         <div className="relative w-[15rem] h-[15rem] md:w-[20rem] md:h-[20rem] xl:w-[25rem] xl:h-[25rem] rounded-full overflow-hidden border-4 border-[#1a1919] dark:border-gray-500">
           <Image
-            src="/images/cover_image.png"
+            src="/images/cover_image1.jpg"
             alt="Cover Image"
             layout="fill"
             objectFit="cover"

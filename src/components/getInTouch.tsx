@@ -29,10 +29,9 @@ const GetInTouch = () => {
           </h2>
 
           <p className="max-w-auto md:max-w-[70%] lg:max-w-[60%] m-auto text-[#1a1919] dark:text-[#A0988C] text-xl tracking-wide mt-5">
-            I&apos;m always excited to collaborate on new projects or discuss
-            innovative ideas. Whether you need a sleek design, a robust
-            application, or anything in between, I&apos;m here to help.
-            Let&apos;s work together to bring your vision to life!
+            I&apos;m always excited to collaborate on modern projects.
+            Whether you need a polished frontend, a solid backend, or a complete
+            full-stack solution, I&apos;m here to help bring your ideas to life.
           </p>
         </div>
         <div className="flex flex-col items-center gap-10 mt-10">

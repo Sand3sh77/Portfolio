@@ -18,60 +18,57 @@ const AboutMe = () => {
               <span className="font-semibold text-indigo-500 dark:text-sky-400">
                 Sandesh Subedi
               </span>
-              , a full-stack web and mobile developer from Pokhara, Nepal.
+              , a full-stack developer from Pokhara, Nepal.
             </p>
 
             <div className="flex items-start gap-4">
               <span className="text-xl md:text-2xl lg:text-3xl text-[#FF5722] dark:text-[#FFC107]">
-                🌟
+                🌐
               </span>
               <div>
                 <p className="font-medium text-[#333] dark:text-[#D6D5D4]">
                   <strong>What I do:</strong>
                 </p>
                 <p className="text-[#555] dark:text-[#B8B8B8]">
-                  I specialize in modern JavaScript frameworks like
+                  I build modern, scalable web applications using technologies
+                  like{" "}
                   <span className="font-medium text-indigo-500 dark:text-sky-400">
-                    {" "}
                     React
                   </span>
-                  ,
+                  ,{" "}
                   <span className="font-medium text-indigo-500 dark:text-sky-400">
-                    {" "}
-                    React Native
+                    Next.js
                   </span>
-                  ,
+                  ,{" "}
                   <span className="font-medium text-indigo-500 dark:text-sky-400">
-                    {" "}
+                    Express.js
+                  </span>{" "}
+                  and{" "}
+                  <span className="font-medium text-indigo-500 dark:text-sky-400">
                     Nest.js
-                  </span>
-                  ,
+                  </span>{" "}
+                  with{" "}
                   <span className="font-medium text-indigo-500 dark:text-sky-400">
-                    {" "}
-                    Prisma
-                  </span>
-                  , and
-                  <span className="font-medium text-indigo-500 dark:text-sky-400">
-                    {" "}
                     TypeScript
                   </span>
-                  , delivering high-quality solutions tailored to your needs.
+                  . I focus on building clean UIs, efficient APIs, and reliable
+                  backend systems.
                 </p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
               <span className="text-xl md:text-2xl lg:text-3xl text-[#FF5722] dark:text-[#FFC107]">
-                🚀
+                ⚡
               </span>
               <div>
                 <p className="font-medium text-[#333] dark:text-[#D6D5D4]">
-                  <strong>Why choose me?</strong>
+                  <strong>Why work with me?</strong>
                 </p>
                 <p className="text-[#555] dark:text-[#B8B8B8]">
-                  I thrive on challenges, blending technical expertise with
-                  creativity to build sleek UIs and solve complex problems
-                  effectively.
+                  I combine strong technical expertise with attention to detail
+                  to deliver fast, user-friendly interfaces and robust backend
+                  solutions.
                 </p>
               </div>
             </div>
@@ -85,26 +82,12 @@ const AboutMe = () => {
                   <strong>Let&apos;s connect!</strong>
                 </p>
                 <p className="text-[#555] dark:text-[#B8B8B8]">
-                  Ready to collaborate and build something extraordinary?
-                  I&apos;m here to help.
+                  If you’re looking to build or upgrade a modern web
+                  application, I’d love to collaborate.
                 </p>
               </div>
             </div>
           </div>
-          <a
-            href="https://www.linkedin.com/in/sandesh-subedi-58735b283"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button
-              borderRadius="0.5rem"
-              className="border-0 bg-[#FFFFFF] dark:bg-[#1E2637]"
-            >
-              <span className="text-base md:text-[1.05rem] font-bold tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500">
-                Open LinkedIn
-              </span>
-            </Button>
-          </a>
         </div>
       </div>
       <div className="relative w-[12rem] h-[12rem] md:w-[18rem] md:h-[18rem] xl:w-[25rem] xl:h-[25rem] flex justify-center items-center text-[#FFFFFF]">
