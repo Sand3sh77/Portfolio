@@ -71,7 +71,7 @@ const TechStack = () => {
           Tech Stack
         </h2>
         <p className="text-[#1a1919] dark:text-[#A0988C] text-base md:text-xl tracking-wide">
-          Some of the tools I use for web and mobile development.
+          Some of the tools I use for software development.
         </p>
       </div>
       <div className="w-[90%]">
