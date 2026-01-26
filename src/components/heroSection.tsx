@@ -43,7 +43,7 @@ export function HeroSection() {
       >
         <div className="relative w-[15rem] h-[15rem] md:w-[20rem] md:h-[20rem] xl:w-[25rem] xl:h-[25rem] rounded-full overflow-hidden border-4 border-[#1a1919] dark:border-gray-500">
           <Image
-            src="/images/cover_image1.jpg"
+            src="/images/profile1.jpeg"
             alt="Cover Image"
             layout="fill"
             objectFit="cover"
@@ -52,7 +52,7 @@ export function HeroSection() {
         </div>
         {/* <div className="rounded-[2rem] overflow-hidden border-4 border-gray-500">
           <Image
-            src="/images/cover_image1.png"
+            src="/images/profile.jpeg"
             alt="Cover Image"
             width={300}
             height={150}
