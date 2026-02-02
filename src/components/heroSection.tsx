@@ -25,7 +25,7 @@ export function HeroSection() {
           <br />I can assist in building robust web applications.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-6">
-          <a href="/files/resume_new.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="/files/Resume_Sandesh_Subedi.pdf" target="_blank" rel="noopener noreferrer">
             <Button
               borderRadius="0.5rem"
               className="border-0 bg-[#FFFFFF] dark:bg-[#1E2637]"
