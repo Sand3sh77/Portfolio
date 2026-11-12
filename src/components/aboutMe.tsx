@@ -1,102 +1,52 @@
-import Image from "next/image";
+import { BrainCircuit, Layers, Users, Workflow } from "lucide-react";
+import { aboutParagraphs, focusAreas, type FocusIcon } from "@/data/profile";
+
+const icons: Record<FocusIcon, typeof Workflow> = {
+  architecture: Workflow,
+  ai: BrainCircuit,
+  product: Layers,
+  leadership: Users,
+};
 
 const AboutMe = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col-reverse md:flex-row gap-16 md:gap-10 xl:gap-32 justify-center items-center px-6 md:px-12 dark:bg-grid-small-white/[0.2] bg-grid-small-[#0000]/[0.2]"
+      className="min-h-screen flex items-center px-6 py-20 md:px-12 dark:bg-grid-small-white/[0.2] bg-grid-small-[#0000]/[0.2]"
     >
-      <div className="w-[100%] md:w-[60%]">
-        <h2 className="text-2xl md:text-5xl font-bold tracking-wide mb-2 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500">
-          About Me
-        </h2>
-        <div className="flex flex-col gap-2 mt-4 md:mt-8 text-base md:text-lg lg:text-xl tracking-wide text-[#1d1c1c] dark:text-[#A0988C]">
-          <div className="space-y-2">
-            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed">
-              Hi, I&apos;m{" "}
-              <span className="font-semibold text-indigo-500 dark:text-sky-400">
-                Sandesh Subedi
-              </span>
-              , a full-stack developer from Pokhara, Nepal.
-            </p>
-
-            <div className="flex items-start gap-4">
-              <span className="text-xl md:text-2xl lg:text-3xl text-[#FF5722] dark:text-[#FFC107]">
-                🌐
-              </span>
-              <div>
-                <p className="font-medium text-[#333] dark:text-[#D6D5D4]">
-                  <strong>What I do:</strong>
-                </p>
-                <p className="text-[#555] dark:text-[#B8B8B8]">
-                  I build modern, scalable web applications using technologies
-                  like{" "}
-                  <span className="font-medium text-indigo-500 dark:text-sky-400">
-                    React
-                  </span>
-                  ,{" "}
-                  <span className="font-medium text-indigo-500 dark:text-sky-400">
-                    Next.js
-                  </span>
-                  ,{" "}
-                  <span className="font-medium text-indigo-500 dark:text-sky-400">
-                    Express.js
-                  </span>{" "}
-                  and{" "}
-                  <span className="font-medium text-indigo-500 dark:text-sky-400">
-                    Nest.js
-                  </span>{" "}
-                  with{" "}
-                  <span className="font-medium text-indigo-500 dark:text-sky-400">
-                    TypeScript
-                  </span>
-                  . I focus on building clean UIs, efficient APIs, and reliable
-                  backend systems.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <span className="text-xl md:text-2xl lg:text-3xl text-[#FF5722] dark:text-[#FFC107]">
-                ⚡
-              </span>
-              <div>
-                <p className="font-medium text-[#333] dark:text-[#D6D5D4]">
-                  <strong>Why work with me?</strong>
-                </p>
-                <p className="text-[#555] dark:text-[#B8B8B8]">
-                  I combine strong technical expertise with attention to detail
-                  to deliver fast, user-friendly interfaces and robust backend
-                  solutions.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <span className="text-xl md:text-2xl lg:text-3xl text-[#FF5722] dark:text-[#FFC107]">
-                🤝
-              </span>
-              <div>
-                <p className="font-medium text-[#333] dark:text-[#D6D5D4]">
-                  <strong>Let&apos;s connect!</strong>
-                </p>
-                <p className="text-[#555] dark:text-[#B8B8B8]">
-                  If you’re looking to build or upgrade a modern web
-                  application, I’d love to collaborate.
-                </p>
-              </div>
-            </div>
+      <div className="w-full max-w-7xl mx-auto grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+        <div>
+          <h2 className="text-2xl md:text-5xl md:leading-[3.5rem] font-bold tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500">
+            About Me
+          </h2>
+          <div className="mt-6 md:mt-8 space-y-5 text-base md:text-lg leading-relaxed text-[#333] dark:text-[#B8B8B8]">
+            {aboutParagraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
         </div>
-      </div>
-      <div className="relative w-[12rem] h-[12rem] md:w-[18rem] md:h-[18rem] xl:w-[25rem] xl:h-[25rem] flex justify-center items-center text-[#FFFFFF]">
-        <Image
-          src="/svg/undraw_website_u6x8.svg"
-          alt=""
-          fill
-          sizes="(min-width: 1280px) 25rem, (min-width: 768px) 18rem, 12rem"
-          className="object-contain"
-        />
+
+        <ul className="grid gap-4 sm:grid-cols-2">
+          {focusAreas.map(({ icon, title, description }) => {
+            const Icon = icons[icon];
+            return (
+              <li
+                key={title}
+                className="rounded-2xl border border-zinc-200 dark:border-[#1E2637] bg-white dark:bg-[#13182F] p-5 transition-colors hover:border-sky-500 dark:hover:border-sky-500"
+              >
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-sky-500/10 text-sky-600 dark:text-sky-400">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <h3 className="mt-4 text-lg font-bold text-[#1a1919] dark:text-[#F1EEEE]">
+                  {title}
+                </h3>
+                <p className="mt-2 text-sm md:text-base leading-relaxed text-[#555] dark:text-[#B8B8B8]">
+                  {description}
+                </p>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </section>
   );

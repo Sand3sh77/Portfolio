@@ -1,8 +1,9 @@
 import { ImageResponse } from "next/og";
+import { profile } from "@/data/profile";
 
 // The Node runtime build of next/og fails to prerender on Windows.
 export const runtime = "edge";
-export const alt = "Sandesh Subedi | Full-Stack Developer";
+export const alt = `${profile.name} | ${profile.title}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -31,13 +32,16 @@ export default function OpengraphImage() {
           }}
         />
         <div style={{ display: "flex", marginTop: 40, fontSize: 88, fontWeight: 700 }}>
-          Sandesh Subedi
+          {profile.name}
         </div>
         <div style={{ display: "flex", marginTop: 16, fontSize: 44, color: "#38bdf8" }}>
-          Full-Stack Developer
+          {profile.title}
+        </div>
+        <div style={{ display: "flex", marginTop: 12, fontSize: 30 }}>
+          {profile.focus}
         </div>
         <div style={{ display: "flex", marginTop: 56, fontSize: 30, color: "#A0988C" }}>
-          subedisandesh7.com.np
+          {profile.domain}
         </div>
       </div>
     ),

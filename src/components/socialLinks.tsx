@@ -6,35 +6,36 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { cn } from "@/lib/utils";
+import { profile } from "@/data/profile";
 
 const links = [
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/sandesh-subedi-58735b283",
+    href: profile.social.linkedin,
     Icon: FaLinkedin,
     hover: "hover:text-[#0B69C7]",
   },
   {
     label: "GitHub",
-    href: "https://github.com/Sand3sh77",
+    href: profile.social.github,
     Icon: FaGithub,
     hover: "hover:text-[#5C6BC0]",
   },
   {
     label: "Facebook",
-    href: "https://www.facebook.com/sandesh.subedi.3979/",
+    href: profile.social.facebook,
     Icon: FaFacebook,
     hover: "hover:text-[#1976D2]",
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/sand3sh77/",
+    href: profile.social.instagram,
     Icon: FaInstagram,
     hover: "hover:text-[#EF4C5C]",
   },
   {
     label: "WhatsApp",
-    href: "https://wa.me/9779866048224?text=Hi%20there,%20I%27d%20like%20to%20discuss%20a%20project",
+    href: profile.social.whatsapp,
     Icon: FaWhatsapp,
     hover: "hover:text-[#4CAF50]",
   },

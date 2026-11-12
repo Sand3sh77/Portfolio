@@ -3,18 +3,24 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { Raleway } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { profile } from "@/data/profile";
+
+const title = `${profile.name} | ${profile.title}`;
+const description =
+  "Sandesh Subedi is a software engineer and project lead building web and mobile products with React, Next.js, React Native and Node.js, and integrating LLMs into real products.";
 
 const font = Raleway({ subsets: ["latin"], weight: "500" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://subedisandesh7.com.np"),
-  title: "Sandesh Subedi | Full-Stack Developer",
-  description:
-    "Portfolio of Sandesh Subedi, a full stack web developer specializing in React, Next.js, Node.js, and modern web technologies.",
+  metadataBase: new URL(profile.siteUrl),
+  title,
+  description,
   keywords: [
     "Sandesh Subedi",
+    "Software Engineer",
+    "Project Lead",
     "Full Stack Developer",
-    "Web Developer",
+    "LLM Integration",
     "React Developer",
     "Next.js Developer",
     "Node.js Developer",
@@ -28,15 +34,14 @@ export const metadata: Metadata = {
   icons: { icon: "/images/favicon.png" },
   // The Open Graph and Twitter images come from src/app/opengraph-image.tsx.
   openGraph: {
-    title: "Sandesh Subedi | Full Stack Web Developer",
-    description:
-      "Explore projects and skills of Sandesh Subedi, specializing in React, Next.js, Node.js, and full stack web development.",
+    title,
+    description,
     url: "/",
     siteName: "Sandesh Subedi Portfolio",
     type: "website",
   },
   twitter: { card: "summary_large_image" },
-  authors: [{ name: "Sandesh Subedi" }],
+  authors: [{ name: profile.name }],
 };
 
 export default function RootLayout({
