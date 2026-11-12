@@ -22,16 +22,7 @@ export default function OpengraphImage() {
           color: "#E6E8EE",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            width: 120,
-            height: 8,
-            borderRadius: 4,
-            background: "linear-gradient(90deg, #6366f1, #0ea5e9, #10b981)",
-          }}
-        />
-        <div style={{ display: "flex", marginTop: 40, fontSize: 88, fontWeight: 700 }}>
+        <div style={{ display: "flex", fontSize: 88, fontWeight: 700 }}>
           {profile.name}
         </div>
         <div style={{ display: "flex", marginTop: 16, fontSize: 44, color: "#38bdf8" }}>

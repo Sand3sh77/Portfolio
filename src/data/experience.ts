@@ -5,58 +5,54 @@ export type Job = {
   company: string;
   period: string;
   location: string;
-  current: boolean;
   highlights: string[];
-  tags: string[];
+  stack: string;
 };
 
 export const jobs: Job[] = [
   {
-    role: "Software Engineer (Project Lead)",
+    role: "Software Engineer, Project Lead",
     company: "AiGeeks",
-    period: "Feb 2026 – Present",
-    location: "United Arab Emirates · Remote",
-    current: true,
+    period: "Feb 2026 - Present",
+    location: "UAE, remote",
     highlights: [
       "Lead development of an AI-powered OSINT platform that collects open-source data and uses LLMs to extract and analyse entities.",
-      "Built the Python web-scraping and text-classification pipeline that feeds the analysis layer.",
-      "Own system design and architecture decisions for the multi-service application.",
+      "Built the Python scraping and text-classification pipeline that feeds the analysis layer.",
+      "Make the system design and architecture calls for the multi-service app.",
       "Mentor the team's interns and review their code before it ships.",
     ],
-    tags: ["Python", "LLM integration", "Web scraping", "System design", "Mentoring"],
+    stack: "Python, LLMs, web scraping, text classification",
   },
   {
     role: "Frontend Developer",
     company: "Nipuna Prabhidhik Sewa",
-    period: "Jan 2025 – Oct 2025",
+    period: "Jan 2025 - Oct 2025",
     location: "Pokhara, Nepal",
-    current: false,
     highlights: [
-      "Built and maintained large Accounting and CRM web applications in React and Tailwind CSS.",
-      "Delivered features in Agile sprints with backend developers and designers, matching Figma designs pixel-accurately.",
+      "Built and maintained large accounting and CRM web apps.",
+      "Shipped features in Agile sprints with backend developers and designers, matching Figma designs closely.",
       "Wrote Jest unit tests, reviewed code and fixed production bugs.",
-      "Promoted to Junior Frontend Developer early for strong performance.",
+      "Promoted early for strong performance.",
     ],
-    tags: ["React", "Tailwind CSS", "Jest", "Figma", "Agile"],
+    stack: "React, Tailwind CSS, Jest, Figma",
   },
   {
-    role: "Full-Stack Web & Mobile Developer",
+    role: "Full-Stack Web and Mobile Developer",
     company: "Freelance",
-    period: "Jan 2022 – Present",
-    location: "Remote · clients in Australia, Canada, Japan and Nepal",
-    current: true,
+    period: "Jan 2022 - Present",
+    location: "Remote",
     highlights: [
-      "Delivered full-stack web and mobile projects for clients and students across four countries.",
-      "Built the official website for the Association of CSIT Students (ACS), Prithvi Narayan Campus.",
-      "Ran several projects in parallel, tracking work in Jira and coordinating with clients over Slack.",
+      "Delivered web and mobile projects for clients in Australia, Canada, Japan and Nepal.",
+      "Built the official website for the Association of CSIT Students at Prithvi Narayan Campus.",
+      "Ran several projects at once, tracking work in Jira and talking to clients over Slack.",
     ],
-    tags: ["Full-stack web", "Mobile", "Client delivery", "Jira"],
+    stack: "React, Next.js, React Native, Node.js",
   },
 ];
 
 export const education = {
-  degree: "B.Sc. Computer Science & Information Technology",
-  school: "Tribhuvan University · Prithvi Narayan Campus, Pokhara",
-  period: "2022 – Expected 2027",
-  detail: "GPA 3.45 / 4.0 across semesters I–VI",
+  degree: "B.Sc. Computer Science and Information Technology",
+  school: "Tribhuvan University, Prithvi Narayan Campus",
+  period: "2022 - 2027 (expected)",
+  detail: "GPA 3.45 / 4.0 over semesters I to VI",
 };

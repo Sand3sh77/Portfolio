@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 import { RxHamburgerMenu } from "react-icons/rx";
+import Link from "next/link";
 import { useTheme } from "next-themes";
 import {
   DropdownMenu,
@@ -56,9 +57,12 @@ const Navbar = () => {
               <Navigation />
             </DropdownMenuContent>
           </DropdownMenu>
-          <div className="text-sm md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500">
+          <Link
+            href="/"
+            className="text-sm md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500"
+          >
             {" { " + profile.domain + " } "}
-          </div>
+          </Link>
         </div>
         <div className="flex gap-2 md:gap-5">
           <DropdownMenu>
