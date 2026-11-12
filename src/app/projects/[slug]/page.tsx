@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/navbar";
 import { ProjectCover } from "@/components/projectCover";
+import { StructuredData } from "@/components/structuredData";
 import { mailtoUrl, profile } from "@/data/profile";
 import { getProject, projects } from "@/data/projects";
 
@@ -55,8 +56,32 @@ export default function ProjectPage({ params }: Props) {
   const phoneImages = project.images.filter((image) => image.kind === "phone");
   const webImages = project.images.filter((image) => image.kind === "web");
 
+  const url = `${profile.siteUrl}/projects/${project.slug}`;
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CreativeWork",
+        name: project.title,
+        description: project.tagline,
+        url,
+        author: { "@type": "Person", name: profile.name, url: profile.siteUrl },
+        keywords: project.stack.join(", "),
+        ...(project.liveUrl ? { sameAs: project.liveUrl } : {}),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: profile.siteUrl },
+          { "@type": "ListItem", position: 2, name: project.title, item: url },
+        ],
+      },
+    ],
+  };
+
   return (
-    <main className="min-h-screen bg-[#dee0e6d2] dark:bg-[#0C1222]">
+    <main id="main" className="min-h-screen bg-[#dee0e6d2] dark:bg-[#0C1222]">
+      <StructuredData data={structuredData} />
       <Navbar />
       <article className="w-full max-w-4xl mx-auto px-6 md:px-12 pt-28 md:pt-36 pb-20">
         <Link
