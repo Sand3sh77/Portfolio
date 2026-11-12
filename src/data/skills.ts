@@ -62,6 +62,79 @@ export const leadership: {
   },
 ];
 
+export type Certificate = {
+  title: string;
+  type: string;
+  issuer: string;
+  issuerLogo: string;
+  date: string;
+  image: string;
+  // Shown as a wide card above the others, with a one-line note.
+  featured?: string;
+};
+
+// Dates and issuers are taken from the certificates themselves.
+export const certificates: Certificate[] = [
+  {
+    title: "Winner, Yantra Hackathon",
+    type: "Award",
+    issuer: "Pokhara Engineering College",
+    issuerLogo: "/images/certifications/author/pec.png",
+    date: "Jun 2024",
+    image: "/images/certifications/hackathon.jpg",
+    featured:
+      "Won the 36-hour hackathon at Yantra, the engineering and architecture festival at Pokhara Engineering College.",
+  },
+  {
+    title: "Software Engineer",
+    type: "HackerRank certification",
+    issuer: "HackerRank",
+    issuerLogo: "/images/certifications/author/hackerrank.png",
+    date: "Jan 2026",
+    image: "/images/certifications/hackerrank-software-engineer.jpg",
+  },
+  {
+    title: "Frontend Developer (React)",
+    type: "HackerRank certification",
+    issuer: "HackerRank",
+    issuerLogo: "/images/certifications/author/hackerrank.png",
+    date: "Jan 2026",
+    image: "/images/certifications/hackerrank-frontend-react.jpg",
+  },
+  {
+    title: "Node (Basic)",
+    type: "HackerRank certification",
+    issuer: "HackerRank",
+    issuerLogo: "/images/certifications/author/hackerrank.png",
+    date: "Jan 2026",
+    image: "/images/certifications/hackerrank-node.jpg",
+  },
+  {
+    title: "PNC-Muroran Collaborative Research Workshop",
+    type: "Research workshop",
+    issuer: "Prithvi Narayan Campus",
+    issuerLogo: "/images/certifications/author/pnc.png",
+    date: "Mar 2024",
+    image: "/images/certifications/collaboration.jpg",
+  },
+  {
+    title: "Remote Work Masterclass",
+    type: "Masterclass",
+    issuer: "Remote Job Nepal",
+    issuerLogo: "/images/certifications/author/remote-job-nepal.png",
+    date: "Sep 2026",
+    image: "/images/certifications/remote-work-masterclass.jpg",
+  },
+  {
+    title: "30 Days Learning Challenge",
+    type: "Challenge",
+    issuer: "Learning Utsav",
+    issuerLogo: "/images/certifications/author/learning_utsav_logo.jpg",
+    date: "Nov 2024",
+    image: "/images/certifications/30dayschallenge.png",
+  },
+];
+
 // Shown as a plain list under the certificate cards.
 export const moreRecognition: { year: string; text: string }[] = [
   {

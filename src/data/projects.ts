@@ -181,8 +181,6 @@ export const projects: Project[] = [
     tagline: "Keeps faculty data, exams and results in one app.",
     role: "Full-stack developer",
     period: "Since 2024",
-    liveUrl: "https://exam-ms.vercel.app",
-    liveLabel: "exam-ms.vercel.app",
     overview: [
       "The Exam Management System handles faculty data, exams and results in one application.",
       "I also set up its delivery pipeline myself: a containerised backend and automatic deploys.",

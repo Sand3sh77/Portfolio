@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { earlierWork, projects } from "@/data/projects";
-import { ProjectCover } from "./projectCover";
+import { cn } from "@/lib/utils";
+import { ProjectCover, ProjectFlow } from "./projectCover";
 
 const MyProjects = () => {
   return (
@@ -15,41 +17,89 @@ const MyProjects = () => {
             Projects
           </h2>
           <p className="text-[#1a1919] dark:text-[#A0988C] text-base md:text-xl tracking-wide">
-            A few things I&apos;ve built. Click one for the details.
+            A few things I&apos;ve built, and what I did on each.
           </p>
         </div>
 
-        <ul className="mt-12 md:mt-16 grid gap-6 md:grid-cols-2">
-          {projects.map((project) => (
-            <li key={project.slug}>
-              <Link
-                href={`/projects/${project.slug}`}
-                className="group flex h-full flex-col overflow-hidden rounded-xl border border-zinc-200 dark:border-[#1E2637] bg-white dark:bg-[#13182F] transition-colors hover:border-[#1a1919]/40 dark:hover:border-gray-500"
+        <ol className="mt-14 md:mt-20 space-y-16 md:space-y-24">
+          {projects.map((project, index) => {
+            const href = `/projects/${project.slug}`;
+            const flip = index % 2 === 1;
+
+            return (
+              <li
+                key={project.slug}
+                className="grid items-center gap-8 md:grid-cols-2 md:gap-14"
               >
-                <ProjectCover
-                  project={project}
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                />
-                <div className="flex flex-1 flex-col p-5 md:p-6">
+                <Link
+                  href={href}
+                  aria-label={`${project.title} case study`}
+                  className={cn("group block", flip && "md:order-2")}
+                >
+                  {project.cover ? (
+                    <ProjectCover
+                      project={project}
+                      sizes="(min-width: 768px) 34rem, 100vw"
+                      className="rounded-2xl border border-zinc-200 dark:border-[#1E2637] shadow-sm"
+                    />
+                  ) : (
+                    <ProjectFlow project={project} className="transition-colors group-hover:border-[#1a1919]/40 dark:group-hover:border-gray-500" />
+                  )}
+                </Link>
+
+                <div>
                   <p className="text-sm text-[#555] dark:text-[#A0988C]">
                     {project.kind}, {project.period.toLowerCase()}
                   </p>
-                  <h3 className="mt-1 text-xl md:text-2xl font-bold text-[#1a1919] dark:text-[#F1EEEE] group-hover:underline underline-offset-4 decoration-1">
-                    {project.title}
+                  <h3 className="mt-3 text-2xl md:text-4xl font-bold text-[#1a1919] dark:text-[#F1EEEE]">
+                    <Link href={href} className="hover:underline underline-offset-4 decoration-2">
+                      {project.title}
+                    </Link>
                   </h3>
-                  <p className="mt-2 text-sm md:text-base leading-relaxed text-[#333] dark:text-[#B8B8B8]">
+                  <p className="mt-3 text-base md:text-lg leading-relaxed text-[#333] dark:text-[#B8B8B8]">
                     {project.tagline}
                   </p>
-                  <p className="mt-auto pt-4 text-sm text-[#555] dark:text-[#A0988C]">
-                    {project.stack.slice(0, 4).join(", ")}
+                  <p className="mt-4 text-sm md:text-base text-[#333] dark:text-[#B8B8B8]">
+                    <span className="font-bold text-[#1a1919] dark:text-[#F1EEEE]">Role:</span>{" "}
+                    {project.role}
                   </p>
+                  <ul className="mt-4 flex flex-wrap gap-2">
+                    {project.stack.slice(0, 5).map((item) => (
+                      <li
+                        key={item}
+                        className="rounded-md border border-[#1a1919]/15 dark:border-gray-500/40 px-2.5 py-1 text-xs md:text-sm text-[#333] dark:text-[#D6D5D4]"
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+                    <Link
+                      href={href}
+                      className="group inline-flex items-center gap-2 rounded-lg bg-[#1a1919] dark:bg-[#F1EEEE] px-4 py-2.5 text-sm font-bold text-white dark:text-[#0C1222] transition-opacity hover:opacity-85"
+                    >
+                      Read case study
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex items-center gap-1 text-sm font-bold text-[#1a1919] dark:text-[#F1EEEE] underline underline-offset-4 decoration-1"
+                      >
+                        Live site
+                        <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                      </a>
+                    )}
+                  </div>
                 </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
+              </li>
+            );
+          })}
+        </ol>
 
-        <div className="mt-14">
+        <div className="mt-20">
           <h3 className="text-lg font-bold text-[#1a1919] dark:text-[#F1EEEE]">
             Older projects
           </h3>
