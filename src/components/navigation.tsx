@@ -7,7 +7,8 @@ const sections = [
   { label: "Experience", href: "/#experience" },
   { label: "Skills", href: "/#skills" },
   { label: "Projects", href: "/#projects" },
-  { label: "Certificates", href: "/#certificates" },
+  { label: "Leadership", href: "/#leadership" },
+  { label: "Awards", href: "/#certificates" },
   { label: "Get In Touch", href: "/#getintouch" },
 ];
 

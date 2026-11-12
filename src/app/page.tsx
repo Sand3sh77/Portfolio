@@ -1,6 +1,7 @@
 import AboutMe from "@/components/aboutMe";
 import Experience from "@/components/experience";
 import GetInTouch from "@/components/getInTouch";
+import Leadership from "@/components/leadership";
 import { HeroBackground } from "@/components/heroBackground";
 import { HeroSection } from "@/components/heroSection";
 import MyProjects from "@/components/myProjects";
@@ -20,6 +21,7 @@ export default function Home() {
         <Experience />
         <TechStack />
         <MyProjects />
+        <Leadership />
         <SkillCertifications />
         <GetInTouch />
       </div>

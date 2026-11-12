@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FollowerPointerCard } from "./ui/following-pointer";
+import { moreRecognition } from "@/data/skills";
 
 interface BlogContent {
   slug: string;
@@ -21,6 +22,45 @@ const blogContent: BlogContent[] = [
       "Provided by Free Students Union-Pokhara Engineering College after winning the 36 hour Yantra hackathon.",
     image: "/images/certifications/hackathon.jpg",
     authorAvatar: "/images/certifications/author/pec.png",
+  },
+  {
+    slug: "hackerrank-software-engineer",
+    author: "HackerRank",
+    date: "4th January, 2026",
+    title: "Software Engineer",
+    description:
+      "Passed HackerRank's Software Engineer role certification test.",
+    image: "/images/certifications/hackerrank-software-engineer.jpg",
+    authorAvatar: "/images/certifications/author/hackerrank.png",
+  },
+  {
+    slug: "hackerrank-frontend-react",
+    author: "HackerRank",
+    date: "3rd January, 2026",
+    title: "Frontend Developer (React)",
+    description:
+      "Passed HackerRank's Frontend Developer (React) role certification test.",
+    image: "/images/certifications/hackerrank-frontend-react.jpg",
+    authorAvatar: "/images/certifications/author/hackerrank.png",
+  },
+  {
+    slug: "hackerrank-node",
+    author: "HackerRank",
+    date: "3rd January, 2026",
+    title: "Node (Basic)",
+    description: "Passed HackerRank's Node (Basic) skill certification test.",
+    image: "/images/certifications/hackerrank-node.jpg",
+    authorAvatar: "/images/certifications/author/hackerrank.png",
+  },
+  {
+    slug: "remote-work-masterclass",
+    author: "Remote Job Nepal",
+    date: "12th September, 2026",
+    title: "Remote Work Masterclass",
+    description:
+      "Attended the Remote Work Masterclass run by Remote Job Nepal with Khalti.",
+    image: "/images/certifications/remote-work-masterclass.jpg",
+    authorAvatar: "/images/certifications/author/remote-job-nepal.png",
   },
   {
     slug: "30dayschallenge",
@@ -90,13 +130,13 @@ const SkillCertifications: React.FC = () => {
     >
       <div className="text-center">
         <h2 className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ... bg-clip-text text-transparent text-2xl md:text-5xl md:leading-[3.5rem] font-bold tracking-wide">
-          Skill Certifications
+          Awards &amp; Certifications
         </h2>
         <p className="text-[#1a1919] dark:text-[#A0988C] text-base md:text-xl tracking-wide">
-          Some of the skill certifications I received.
+          Certificates first, then the other recognition I&apos;ve received.
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row justify-evenly items-center gap-5 mt-8">
+      <div className="flex flex-col lg:flex-row lg:flex-wrap justify-center items-center lg:items-stretch gap-5 mt-8">
         {blogContent.map((item) => (
           <div
             key={item.slug}
@@ -138,6 +178,15 @@ const SkillCertifications: React.FC = () => {
           </div>
         ))}
       </div>
+
+      <ul className="w-full mt-12 divide-y divide-[#1a1919]/15 dark:divide-gray-500/30 border-y border-[#1a1919]/15 dark:border-gray-500/30">
+        {moreRecognition.map((item) => (
+          <li key={item.text} className="grid gap-1 py-3 sm:grid-cols-[5rem_1fr] sm:gap-6">
+            <span className="text-sm text-[#555] dark:text-[#A0988C]">{item.year}</span>
+            <span className="leading-relaxed text-[#333] dark:text-[#B8B8B8]">{item.text}</span>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 };
