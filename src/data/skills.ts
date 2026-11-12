@@ -62,84 +62,68 @@ export const leadership: {
   },
 ];
 
-export type Recognition = {
-  title: string;
-  issuer: string;
-  date: string;
-  note?: string;
-  // Path to the certificate image, when there is one to show.
-  image?: string;
+// Awards and certifications, shown as a bento grid.
+// Dates and issuers are taken from the certificates themselves.
+
+export const hackathon = {
+  title: "Yantra Hackathon",
+  result: "Winner",
+  detail: "36-hour hackathon at Pokhara Engineering College",
+  date: "June 2024",
+  image: "/images/certifications/hackathon.jpg",
 };
 
-// Newest first. Dates and issuers are taken from the certificates themselves.
-export const awards: Recognition[] = [
-  {
-    title: "Letter of Appreciation",
-    issuer: "Pokhara Metropolitan City Youth Council",
-    date: "2026",
-    note: "For the digital literacy programme",
-  },
+export const hackerrank = {
+  title: "HackerRank certified",
+  detail: "Passed HackerRank's role and skill certification tests.",
+  date: "Jan 2026",
+  certificates: [
+    { label: "Software Engineer", href: "/images/certifications/hackerrank-software-engineer.jpg" },
+    { label: "Frontend Developer (React)", href: "/images/certifications/hackerrank-frontend-react.jpg" },
+    { label: "Node (Basic)", href: "/images/certifications/hackerrank-node.jpg" },
+  ],
+};
+
+export type RecognitionIcon = "phone" | "school" | "team" | "globe";
+
+export const recognition: {
+  title: string;
+  issuer: string;
+  description: string;
+  date: string;
+  icon: RecognitionIcon;
+  wide?: boolean;
+  href?: string;
+}[] = [
   {
     title: "Token of Appreciation",
     issuer: "Association of CSIT Students",
+    description: "For building the ACS App.",
     date: "2025",
-    note: "For building the ACS App",
+    icon: "phone",
+  },
+  {
+    title: "Letter of Appreciation",
+    issuer: "Pokhara Youth Council",
+    description: "For teaching school students AI basics and online safety.",
+    date: "2026",
+    icon: "school",
   },
   {
     title: "Certificate of Appreciation",
     issuer: "ACS Research, Development and Innovation",
+    description: "For outstanding service as Tech Lead of the student tech team.",
     date: "2025",
-    note: "For my time as Tech Lead",
+    icon: "team",
+    wide: true,
   },
   {
-    title: "Winner, Yantra Hackathon",
-    issuer: "Pokhara Engineering College",
-    date: "Jun 2024",
-    note: "36-hour hackathon",
-    image: "/images/certifications/hackathon.jpg",
-  },
-];
-
-export const certifications: Recognition[] = [
-  {
-    title: "Remote Work Masterclass",
-    issuer: "Remote Job Nepal",
-    date: "Sep 2026",
-    image: "/images/certifications/remote-work-masterclass.jpg",
-  },
-  {
-    title: "Software Engineer",
-    issuer: "HackerRank",
-    date: "Jan 2026",
-    image: "/images/certifications/hackerrank-software-engineer.jpg",
-  },
-  {
-    title: "Frontend Developer (React)",
-    issuer: "HackerRank",
-    date: "Jan 2026",
-    image: "/images/certifications/hackerrank-frontend-react.jpg",
-  },
-  {
-    title: "Node (Basic)",
-    issuer: "HackerRank",
-    date: "Jan 2026",
-    image: "/images/certifications/hackerrank-node.jpg",
-  },
-  {
-    title: "30 Days Learning Challenge",
-    issuer: "Learning Utsav",
-    date: "Nov 2024",
-    image: "/images/certifications/30dayschallenge.png",
-  },
-  {
-    title: "What Is Generative AI?",
-    issuer: "LinkedIn Learning",
-    date: "2024",
-  },
-  {
-    title: "PNC-Muroran Collaborative Research Workshop",
-    issuer: "Prithvi Narayan Campus",
+    title: "PNC-Muroran Research Workshop",
+    issuer: "Prithvi Narayan Campus with Muroran Institute of Technology, Japan",
+    description: "A week-long collaborative research workshop.",
     date: "Mar 2024",
-    image: "/images/certifications/collaboration.jpg",
+    icon: "globe",
+    wide: true,
+    href: "/images/certifications/collaboration.jpg",
   },
 ];

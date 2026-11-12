@@ -20,7 +20,7 @@ export const profile = {
       "https://wa.me/9779866048224?text=Hi%20there,%20I%27d%20like%20to%20discuss%20a%20project",
   },
   intro:
-    "I build web and mobile apps with React, Next.js, React Native and Node.js. These days I'm the project lead on an OSINT platform at AiGeeks, where I designed the architecture and wrote the Python pipeline that scrapes open-source data and hands it to an LLM to pull out entities.",
+    "I build web and mobile apps with React, Next.js, React Native and Node.js. These days I'm working on an OSINT platform at AiGeeks, where I designed the architecture and wrote the Python pipeline that scrapes open-source data and hands it to an LLM to pull out entities.",
 } as const;
 
 export const mailtoUrl = `mailto:${profile.email}`;
