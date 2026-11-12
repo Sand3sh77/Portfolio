@@ -1,4 +1,5 @@
 import AboutMe from "@/components/aboutMe";
+import Experience from "@/components/experience";
 import GetInTouch from "@/components/getInTouch";
 import { HeroBackground } from "@/components/heroBackground";
 import { HeroSection } from "@/components/heroSection";
@@ -6,7 +7,6 @@ import MyProjects from "@/components/myProjects";
 import Navbar from "@/components/navbar";
 import SkillCertifications from "@/components/skillCertifications";
 import TechStack from "@/components/techStack";
-import Timeline from "@/components/timeline";
 
 export default function Home() {
   return (
@@ -17,8 +17,8 @@ export default function Home() {
           <HeroSection />
         </HeroBackground>
         <AboutMe />
+        <Experience />
         <TechStack />
-        <Timeline />
         <MyProjects />
         <SkillCertifications />
         <GetInTouch />
