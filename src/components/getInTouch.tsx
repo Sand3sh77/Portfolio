@@ -32,8 +32,8 @@ const GetInTouch = () => {
           </h2>
 
           <p className="max-w-auto md:max-w-[70%] lg:max-w-[60%] m-auto text-[#1a1919] dark:text-[#A0988C] text-xl tracking-wide mt-5">
-            Whether it&apos;s a role, a project or a technical question, my
-            inbox is open. Email is the fastest way to reach me.
+            I&apos;m open to new roles and the occasional interesting project.
+            Email is the best way to reach me.
           </p>
         </div>
         <div className="flex flex-col items-center gap-10 mt-10">

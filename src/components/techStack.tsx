@@ -1,9 +1,17 @@
 import { HoverEffect } from "./ui/card-hover-effect";
 import { RiNextjsFill } from "react-icons/ri";
-import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiMongodb, SiNestjs, SiPrisma, SiTypescript } from "react-icons/si";
-import { GrMysql } from "react-icons/gr";
-import { IoLogoJavascript } from "react-icons/io5";
+import { FaAws, FaReact, FaNodeJs } from "react-icons/fa";
+import {
+  SiDocker,
+  SiMongodb,
+  SiNestjs,
+  SiPostgresql,
+  SiPrisma,
+  SiPython,
+  SiRedis,
+  SiTypescript,
+} from "react-icons/si";
+import { skillGroups } from "@/data/skills";
 
 const TechStack = () => {
   const projects = [
@@ -13,34 +21,34 @@ const TechStack = () => {
       hover: "#78d5d0",
     },
     {
-      title: "React & ReactNative",
+      title: "React & React Native",
       svg: <FaReact className="h-[3rem] w-[3rem]" />,
       hover: "#60C7DE",
     },
     {
-      title: "Nest.js",
-      svg: <SiNestjs className="h-[3rem] w-[3rem]" />,
-      hover: "#E92853",
-    },
-    {
-      title: "Javascript",
-      svg: <IoLogoJavascript className="h-[3rem] w-[3rem]" />,
-      hover: "#ebd744",
-    },
-    {
-      title: "Typescript",
+      title: "TypeScript",
       svg: <SiTypescript className="h-[3rem] w-[3rem]" />,
       hover: "#017acb",
     },
     {
-      title: "NodeJS",
+      title: "Node.js",
       svg: <FaNodeJs className="h-[3rem] w-[3rem]" />,
       hover: "#8cc84b",
     },
     {
-      title: "MySql",
-      svg: <GrMysql className="h-[3rem] w-[3rem]" />,
-      hover: "rgb(0,84,107)",
+      title: "NestJS",
+      svg: <SiNestjs className="h-[3rem] w-[3rem]" />,
+      hover: "#E92853",
+    },
+    {
+      title: "Python",
+      svg: <SiPython className="h-[3rem] w-[3rem]" />,
+      hover: "#3776AB",
+    },
+    {
+      title: "PostgreSQL",
+      svg: <SiPostgresql className="h-[3rem] w-[3rem]" />,
+      hover: "#4169E1",
     },
     {
       title: "MongoDB",
@@ -48,9 +56,24 @@ const TechStack = () => {
       hover: "#10AA50",
     },
     {
+      title: "Redis",
+      svg: <SiRedis className="h-[3rem] w-[3rem]" />,
+      hover: "#DC382D",
+    },
+    {
       title: "Prisma",
       svg: <SiPrisma className="h-[3rem] w-[3rem]" />,
       hover: "#466391",
+    },
+    {
+      title: "Docker",
+      svg: <SiDocker className="h-[3rem] w-[3rem]" />,
+      hover: "#2496ED",
+    },
+    {
+      title: "AWS",
+      svg: <FaAws className="h-[3rem] w-[3rem]" />,
+      hover: "#FF9900",
     },
   ];
 
@@ -70,6 +93,15 @@ const TechStack = () => {
       <div className="w-[90%]">
         <HoverEffect items={projects} />
       </div>
+
+      <dl className="w-[90%] mt-10 divide-y divide-[#1a1919]/15 dark:divide-gray-500/30 border-y border-[#1a1919]/15 dark:border-gray-500/30">
+        {skillGroups.map(({ group, items }) => (
+          <div key={group} className="grid gap-1 py-3 sm:grid-cols-[10rem_1fr] sm:gap-6">
+            <dt className="font-bold text-[#1a1919] dark:text-[#F1EEEE]">{group}</dt>
+            <dd className="leading-relaxed text-[#333] dark:text-[#B8B8B8]">{items}</dd>
+          </div>
+        ))}
+      </dl>
     </section>
   );
 };

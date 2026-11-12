@@ -7,7 +7,7 @@ import { profile } from "@/data/profile";
 
 const title = `${profile.name} | ${profile.title}`;
 const description =
-  "Sandesh Subedi is a software engineer and project lead building web and mobile products with React, Next.js, React Native and Node.js, and integrating LLMs into real products.";
+  "Sandesh Subedi is a software engineer in Pokhara, Nepal. He leads an AI-powered OSINT platform at AiGeeks and builds web and mobile apps with React, Next.js, React Native and Node.js.";
 
 const font = Raleway({ subsets: ["latin"], weight: "500" });
 
@@ -53,6 +53,12 @@ export default function RootLayout({
     // next-themes sets the theme class on <html> before hydration.
     <html lang="en" suppressHydrationWarning>
       <body className={font.className}>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-[#1a1919] focus:shadow"
+        >
+          Skip to content
+        </a>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

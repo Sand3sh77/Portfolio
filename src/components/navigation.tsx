@@ -2,12 +2,14 @@ import { DropdownMenuItem } from "./ui/dropdown-menu";
 import { SocialLinks } from "./socialLinks";
 
 const sections = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Certificates", href: "#certificates" },
-  { label: "Get In Touch", href: "#getintouch" },
+  { label: "Home", href: "/#home" },
+  { label: "About", href: "/#about" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Leadership", href: "/#leadership" },
+  { label: "Awards", href: "/#certificates" },
+  { label: "Get In Touch", href: "/#getintouch" },
 ];
 
 const Navigation = () => {
