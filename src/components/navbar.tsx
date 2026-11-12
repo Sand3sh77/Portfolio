@@ -11,6 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Navigation from "./navigation";
+import { profile } from "@/data/profile";
 
 const Navbar = () => {
   const { setTheme } = useTheme();
@@ -56,7 +57,7 @@ const Navbar = () => {
             </DropdownMenuContent>
           </DropdownMenu>
           <div className="text-sm md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500">
-            {" { " + "subedisandesh7.com.np" + " } "}
+            {" { " + profile.domain + " } "}
           </div>
         </div>
         <div className="flex gap-2 md:gap-5">
@@ -95,7 +96,7 @@ const Navbar = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <a href="/files/Resume_Sandesh_Subedi.pdf" target="_blank" rel="noopener noreferrer">
+          <a href={profile.resumeUrl} target="_blank" rel="noopener noreferrer">
             <div className="px-2 py-2 text-sm md:font-semibold tracking-wide md:tracking-widest cursor-pointer rounded bg-[#dee0e6d2] text-[#1f1e1e] dark:bg-[#1E2637] dark:text-[#c2b7c5] md:px-8 md:py-3">
               RESUME
             </div>
