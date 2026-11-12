@@ -62,92 +62,84 @@ export const leadership: {
   },
 ];
 
-export type Certificate = {
+export type Recognition = {
   title: string;
-  type: string;
   issuer: string;
-  issuerLogo: string;
   date: string;
-  image: string;
-  // Shown as a wide card above the others, with a one-line note.
-  featured?: string;
+  note?: string;
+  // Path to the certificate image, when there is one to show.
+  image?: string;
 };
 
-// Dates and issuers are taken from the certificates themselves.
-export const certificates: Certificate[] = [
+// Newest first. Dates and issuers are taken from the certificates themselves.
+export const awards: Recognition[] = [
+  {
+    title: "Letter of Appreciation",
+    issuer: "Pokhara Metropolitan City Youth Council",
+    date: "2026",
+    note: "For the digital literacy programme",
+  },
+  {
+    title: "Token of Appreciation",
+    issuer: "Association of CSIT Students",
+    date: "2025",
+    note: "For building the ACS App",
+  },
+  {
+    title: "Certificate of Appreciation",
+    issuer: "ACS Research, Development and Innovation",
+    date: "2025",
+    note: "For my time as Tech Lead",
+  },
   {
     title: "Winner, Yantra Hackathon",
-    type: "Award",
     issuer: "Pokhara Engineering College",
-    issuerLogo: "/images/certifications/author/pec.png",
     date: "Jun 2024",
+    note: "36-hour hackathon",
     image: "/images/certifications/hackathon.jpg",
-    featured:
-      "Won the 36-hour hackathon at Yantra, the engineering and architecture festival at Pokhara Engineering College.",
+  },
+];
+
+export const certifications: Recognition[] = [
+  {
+    title: "Remote Work Masterclass",
+    issuer: "Remote Job Nepal",
+    date: "Sep 2026",
+    image: "/images/certifications/remote-work-masterclass.jpg",
   },
   {
     title: "Software Engineer",
-    type: "HackerRank certification",
     issuer: "HackerRank",
-    issuerLogo: "/images/certifications/author/hackerrank.png",
     date: "Jan 2026",
     image: "/images/certifications/hackerrank-software-engineer.jpg",
   },
   {
     title: "Frontend Developer (React)",
-    type: "HackerRank certification",
     issuer: "HackerRank",
-    issuerLogo: "/images/certifications/author/hackerrank.png",
     date: "Jan 2026",
     image: "/images/certifications/hackerrank-frontend-react.jpg",
   },
   {
     title: "Node (Basic)",
-    type: "HackerRank certification",
     issuer: "HackerRank",
-    issuerLogo: "/images/certifications/author/hackerrank.png",
     date: "Jan 2026",
     image: "/images/certifications/hackerrank-node.jpg",
   },
   {
-    title: "PNC-Muroran Collaborative Research Workshop",
-    type: "Research workshop",
-    issuer: "Prithvi Narayan Campus",
-    issuerLogo: "/images/certifications/author/pnc.png",
-    date: "Mar 2024",
-    image: "/images/certifications/collaboration.jpg",
-  },
-  {
-    title: "Remote Work Masterclass",
-    type: "Masterclass",
-    issuer: "Remote Job Nepal",
-    issuerLogo: "/images/certifications/author/remote-job-nepal.png",
-    date: "Sep 2026",
-    image: "/images/certifications/remote-work-masterclass.jpg",
-  },
-  {
     title: "30 Days Learning Challenge",
-    type: "Challenge",
     issuer: "Learning Utsav",
-    issuerLogo: "/images/certifications/author/learning_utsav_logo.jpg",
     date: "Nov 2024",
     image: "/images/certifications/30dayschallenge.png",
   },
-];
-
-// Shown as a plain list under the certificate cards.
-export const moreRecognition: { year: string; text: string }[] = [
   {
-    year: "2026",
-    text: "Letter of Appreciation from the Pokhara Metropolitan City Youth Council for the digital literacy programme",
+    title: "What Is Generative AI?",
+    issuer: "LinkedIn Learning",
+    date: "2024",
   },
   {
-    year: "2025",
-    text: "Token of Appreciation from the Association of CSIT Students for building the ACS App",
+    title: "PNC-Muroran Collaborative Research Workshop",
+    issuer: "Prithvi Narayan Campus",
+    date: "Mar 2024",
+    image: "/images/certifications/collaboration.jpg",
   },
-  {
-    year: "2025",
-    text: "Certificate of Appreciation from ACS RDI for my time as Tech Lead",
-  },
-  { year: "2024", text: "What Is Generative AI?, LinkedIn Learning" },
 ];
