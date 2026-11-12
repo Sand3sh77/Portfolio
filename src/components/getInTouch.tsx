@@ -1,10 +1,12 @@
+"use client";
+
 import { useTheme } from "next-themes";
 import { SocialLinks } from "./socialLinks";
 import { Button } from "./ui/moving-border";
 import { SparklesCore } from "./ui/sparkles";
 
 const GetInTouch = () => {
-  const { theme, resolvedTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   return (
     <section
@@ -37,8 +39,6 @@ const GetInTouch = () => {
         <div className="flex flex-col items-center gap-10 mt-10">
           <a
             href="mailto:subedisandesh0123@gmail.com?subject=Project%20Inquiry&amp;body=Hi%20Sandesh,%0D%0A%0D%0AI'd%20like%20to%20discuss%20a%20project%20with%20you.%0D%0A%0D%0AThanks!"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <Button
               borderRadius="0.5rem"
@@ -50,7 +50,7 @@ const GetInTouch = () => {
             </Button>
           </a>
           <div>
-            <SocialLinks />
+            <SocialLinks className="bg-[#fcfafa] dark:bg-[#13182F]" />
           </div>
         </div>
       </div>

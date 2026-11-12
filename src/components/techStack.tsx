@@ -1,16 +1,9 @@
-import Image from "next/image";
 import { HoverEffect } from "./ui/card-hover-effect";
 import { RiNextjsFill } from "react-icons/ri";
-import {
-  FaReact,
-  FaFigma,
-  FaNodeJs,
-  FaCreativeCommonsPdAlt,
-} from "react-icons/fa";
-import { SiMongodb, SiNestjs, SiPrisma } from "react-icons/si";
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import { SiMongodb, SiNestjs, SiPrisma, SiTypescript } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import { IoLogoJavascript } from "react-icons/io5";
-import { SiCplusplus, SiTypescript } from "react-icons/si";
 
 const TechStack = () => {
   const projects = [

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Button } from "./ui/moving-border";
 
 const AboutMe = () => {
   return (
@@ -93,10 +92,10 @@ const AboutMe = () => {
       <div className="relative w-[12rem] h-[12rem] md:w-[18rem] md:h-[18rem] xl:w-[25rem] xl:h-[25rem] flex justify-center items-center text-[#FFFFFF]">
         <Image
           src="/svg/undraw_website_u6x8.svg"
-          alt="Cover Image"
-          layout="fill"
-          objectFit="contain"
-          className=""
+          alt=""
+          fill
+          sizes="(min-width: 1280px) 25rem, (min-width: 768px) 18rem, 12rem"
+          className="object-contain"
         />
       </div>
     </section>

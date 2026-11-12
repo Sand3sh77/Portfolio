@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useTheme } from "next-themes";
@@ -15,29 +15,24 @@ import Navigation from "./navigation";
 const Navbar = () => {
   const { setTheme } = useTheme();
   const [showNavbar, setShowNavbar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
+    // Hide on scroll down, show on scroll up.
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        // Scroll down
-        setShowNavbar(false);
-      } else {
-        // Scroll up
-        setShowNavbar(true);
-      }
-      setLastScrollY(window.scrollY);
+      setShowNavbar(window.scrollY <= lastScrollY.current);
+      lastScrollY.current = window.scrollY;
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollY]);
+  }, []);
 
   return (
-    <section
+    <header
       className={`fixed top-0 left-0 w-full z-50 h-16 md:h-20 transition-transform duration-300 ${showNavbar ? "translate-y-0" : "-translate-y-full"
         } bg-[#f3f4f7c0] dark:bg-[#151932d2]`}
     >
@@ -45,9 +40,13 @@ const Navbar = () => {
         <div className="flex gap-2 sm:gap-5 justify-center items-center">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <div className="flex justify-center items-center h-[2.3rem] md:h-[2.8rem] p-3 text-xl font-semibold tracking-widest cursor-pointer rounded bg-[#dee0e6d2] text-[#1f1e1e] dark:bg-[#1E2637] dark:text-[#c2b7c5]">
+              <button
+                type="button"
+                aria-label="Open navigation menu"
+                className="flex justify-center items-center h-[2.3rem] md:h-[2.8rem] p-3 text-xl font-semibold tracking-widest cursor-pointer rounded bg-[#dee0e6d2] text-[#1f1e1e] dark:bg-[#1E2637] dark:text-[#c2b7c5]"
+              >
                 <RxHamburgerMenu className="h-[1rem] w-[1rem] md:h-[1.5rem] md:w-[1.5rem]" />
-              </div>
+              </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent
               align="start"
@@ -63,11 +62,14 @@ const Navbar = () => {
         <div className="flex gap-2 md:gap-5">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <div className="flex justify-center items-center h-[2.3rem] md:h-[2.8rem] px-3 md:px-4 py-3 text-base font-semibold tracking-widest cursor-pointer rounded bg-[#dee0e6d2] text-[#1f1e1e] dark:bg-[#1E2637] dark:text-[#c2b7c5]">
+              <button
+                type="button"
+                className="flex justify-center items-center h-[2.3rem] md:h-[2.8rem] px-3 md:px-4 py-3 text-base font-semibold tracking-widest cursor-pointer rounded bg-[#dee0e6d2] text-[#1f1e1e] dark:bg-[#1E2637] dark:text-[#c2b7c5]"
+              >
                 <Sun className="h-[1rem] w-[1rem] md:h-[1.2rem] md:w-[1.2rem] transition-all rotate-0 scale-100 dark:-rotate-90 dark:scale-0" />
                 <Moon className="absolute h-[1rem] w-[1rem] md:h-[1.2rem] md:w-[1.2rem] transition-all rotate-90 scale-0 dark:rotate-0 dark:scale-100" />
                 <span className="sr-only">Toggle theme</span>
-              </div>
+              </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent
               align="end"
@@ -100,7 +102,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-    </section>
+    </header>
   );
 };
 

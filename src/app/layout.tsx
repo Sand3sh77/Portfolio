@@ -4,15 +4,10 @@ import { Analytics } from "@vercel/analytics/next";
 import { Raleway } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-/>;
-
 const font = Raleway({ subsets: ["latin"], weight: "500" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://subedisandesh7.com.np"),
   title: "Sandesh Subedi | Full-Stack Developer",
   description:
     "Portfolio of Sandesh Subedi, a full stack web developer specializing in React, Next.js, Node.js, and modern web technologies.",
@@ -29,15 +24,18 @@ export const metadata: Metadata = {
     "TypeScript",
     "Portfolio",
   ],
+  alternates: { canonical: "/" },
+  icons: { icon: "/images/favicon.png" },
+  // The Open Graph and Twitter images come from src/app/opengraph-image.tsx.
   openGraph: {
     title: "Sandesh Subedi | Full Stack Web Developer",
     description:
       "Explore projects and skills of Sandesh Subedi, specializing in React, Next.js, Node.js, and full stack web development.",
-    url: "https://subedisandesh7.com.np",
+    url: "/",
     siteName: "Sandesh Subedi Portfolio",
-    images: [{ url: "/images/og-image.png", width: 1200, height: 630 }],
     type: "website",
   },
+  twitter: { card: "summary_large_image" },
   authors: [{ name: "Sandesh Subedi" }],
 };
 
@@ -47,15 +45,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/images/favicon.png" sizes="any" />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-        />
-      </head>
+    // next-themes sets the theme class on <html> before hydration.
+    <html lang="en" suppressHydrationWarning>
       <body className={font.className}>
         <ThemeProvider
           attribute="class"
@@ -63,9 +54,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Analytics />
           {children}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

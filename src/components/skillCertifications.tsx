@@ -75,7 +75,7 @@ const TitleComponent: React.FC<TitleComponentProps> = ({ title, avatar }) => (
       src={avatar}
       height={20}
       width={20}
-      alt="thumbnail"
+      alt=""
       className="rounded-full border-2 border-white bg-white"
     />
     <p>{title}</p>
@@ -114,9 +114,9 @@ const SkillCertifications: React.FC = () => {
                 <div className="w-full h-[12rem] bg-gray-100 dark:bg-[#13182F] rounded-tr-lg rounded-tl-lg overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative">
                   <Image
                     src={item.image}
-                    alt="thumbnail"
-                    layout="fill"
-                    objectFit="cover"
+                    alt={item.title}
+                    fill
+                    sizes="(min-width: 768px) 25rem, 20rem"
                     className="group-hover:scale-95 group-hover:rounded-2xl transform object-cover transition duration-200"
                   />
                 </div>
