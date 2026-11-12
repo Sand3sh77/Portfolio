@@ -1,8 +1,4 @@
-// "use client"
-
-import { HoverEffect } from "./ui/card-hover-effect";
 import { DirectionAwareHover } from "./ui/direction-aware-hover";
-import { Button } from "./ui/moving-border";
 
 const Projects = [
   {
@@ -58,14 +54,22 @@ const MyProjects = () => {
               >
                 <div className="flex text-nowrap">
                   {project.codeUrl && (
-                    <a href={project.codeUrl} target="_blank">
+                    <a
+                      href={project.codeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <button className="rounded py-2 px-4 hover:text-[#c2c2c5]">
                         Visit Code
                       </button>
                     </a>
                   )}
                   {project.siteUrl && (
-                    <a href={project.siteUrl} target="_blank">
+                    <a
+                      href={project.siteUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <button className="rounded py-2 px-4 hover:text-[#c2c2c5]">
                         Visit Site
                       </button>

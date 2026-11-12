@@ -1,0 +1,46 @@
+import { ImageResponse } from "next/og";
+
+// The Node runtime build of next/og fails to prerender on Windows.
+export const runtime = "edge";
+export const alt = "Sandesh Subedi | Full-Stack Developer";
+export const size = { width: 1200, height: 630 };
+export const contentType = "image/png";
+
+export default function OpengraphImage() {
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          padding: "0 96px",
+          background: "#0C1222",
+          color: "#E6E8EE",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            width: 120,
+            height: 8,
+            borderRadius: 4,
+            background: "linear-gradient(90deg, #6366f1, #0ea5e9, #10b981)",
+          }}
+        />
+        <div style={{ display: "flex", marginTop: 40, fontSize: 88, fontWeight: 700 }}>
+          Sandesh Subedi
+        </div>
+        <div style={{ display: "flex", marginTop: 16, fontSize: 44, color: "#38bdf8" }}>
+          Full-Stack Developer
+        </div>
+        <div style={{ display: "flex", marginTop: 56, fontSize: 30, color: "#A0988C" }}>
+          subedisandesh7.com.np
+        </div>
+      </div>
+    ),
+    size
+  );
+}

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import type { Container, SingleOrMultiple } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import { motion, useAnimation } from "framer-motion";
 
 type ParticlesProps = {
@@ -40,9 +40,7 @@ export const SparklesCore = (props: ParticlesProps) => {
   const controls = useAnimation();
 
   const particlesLoaded = async (container?: Container) => {
-    if (container) {
-      console.log(container);
-      controls.start({
+    if (container) {      controls.start({
         opacity: 1,
         transition: {
           duration: 1,

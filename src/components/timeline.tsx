@@ -1,7 +1,6 @@
 "use client";
 
 import gsap from "gsap";
-// import "./timeline.scss";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
@@ -13,47 +12,42 @@ const Timeline = () => {
   const triggerRef = useRef(null);
   const maskRef = useRef(null);
 
-  gsap.registerPlugin(ScrollTrigger);
-
   useEffect(() => {
-    const pin = gsap.fromTo(
-      sectionRef.current,
-      {
-        translateX: 0,
-      },
-      {
-        translateX: "-200vw",
-        ease: "none",
-        duration: 1,
+    // The timeline is hidden below md, so only pin and animate on wider screens.
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 768px)", () => {
+      gsap.fromTo(
+        sectionRef.current,
+        { translateX: 0 },
+        {
+          translateX: "-200vw",
+          ease: "none",
+          duration: 1,
+          scrollTrigger: {
+            trigger: triggerRef.current,
+            start: "top top",
+            end: "2000 top",
+            scrub: 0.6,
+            pin: true,
+          },
+        }
+      );
+
+      // Progress bar animation
+      gsap.to(maskRef.current, {
+        width: "100%",
         scrollTrigger: {
           trigger: triggerRef.current,
           start: "top top",
           end: "2000 top",
           scrub: 0.6,
-          pin: true,
-          // markers: true,
         },
-      }
-    );
-
-    //Progress bar animation
-
-    gsap.to(maskRef.current, {
-      width: "100%",
-      scrollTrigger: {
-        trigger: triggerRef.current,
-        start: "top top",
-        end: "2000 top",
-        scrub: 0.6,
-        // markers: true,
-      },
+      });
     });
-    return () => {
-      {
-        /* A return function for killing the animation on component unmount */
-      }
-      pin.kill();
-    };
+
+    // Reverts every tween and ScrollTrigger created above.
+    return () => mm.revert();
   }, []);
 
   return (
@@ -124,8 +118,9 @@ const Timeline = () => {
                 <Image
                   src="/svg/undraw_toy_car_-7-umw.svg"
                   alt="Born in Pokhara"
-                  layout="fill"
-                  objectFit="contain"
+                  fill
+                  sizes="25rem"
+                  className="object-contain"
                 />
               </div>
             </section>
@@ -150,8 +145,9 @@ const Timeline = () => {
                 <Image
                   src="/images/Timeline/49571516_9233298-removebg-preview.png"
                   alt="Secondary Schooling"
-                  layout="fill"
-                  objectFit="contain"
+                  fill
+                  sizes="25rem"
+                  className="object-contain"
                 />
               </div>
             </section>
@@ -176,15 +172,15 @@ const Timeline = () => {
                 <Image
                   src="/images/Timeline/programmer-working-isometric-style.png"
                   alt="Present"
-                  layout="fill"
-                  objectFit="contain"
+                  fill
+                  sizes="25rem"
+                  className="object-contain"
                 />
               </div>
             </section>
           </div>
         </div>
       </div>
-      {/* <section style={{ backgroundColor: "sky" }}></section> */}
     </>
   );
 };
